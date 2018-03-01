@@ -43,11 +43,6 @@ A aplicação deverá expor os seguintes serviços REST:
 
 Ao final, todos os JUnits que estão disponíveis nesse projeto deverão executar com sucesso.
 
->
-> Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
-> – Martin Fowler
->
-
 ## Desafios
 
 Serão considerados como um diferencial em sua avaliação, a implementação de ao menos um dos seguintes desafios:
@@ -56,3 +51,7 @@ Serão considerados como um diferencial em sua avaliação, a implementação de
 * Criação de um serviço adicional para consulta da categoria com a maior ocorrência de uma determinada letra em seu nome. Por exemplo, se tivermos a categoria **Brinquedos** e a categoria **Medicamentos** e eu chamar este serviço passando como parâmetro a letra "e" o retorno do serviço deverá ser a categoria **Medicamentos** :D
 * Execução de testes unitários e integrados em ciclo de build distintos ¯\_(ツ)_/¯
 
+>
+> Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+> – Martin Fowler
+>
