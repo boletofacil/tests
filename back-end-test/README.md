@@ -20,7 +20,7 @@ Para executar a aplicação basta utilizar o seguinte comando:
 
 ## Objetivos
 
-Para alcançar os resultados esperados dessa avaliação, você tem total liberdade para desenvolver como lhe convir. Sinta-se livre para utilizar os frameworks, padrões de projeto e tecnologias que melhor se adapte. Apenas tenha em mente que, ao final do desenvolvimento, a aplicação terá que cumprir com os objetivos listados a seguir.
+Para alcançar os resultados esperados dessa avaliação, você tem total liberdade para desenvolver da maneira que preferir. Você também é livre para utilizar os frameworks, padrões de projeto e tecnologias que melhor se adapte. Só não se esqueça que, ao final do desenvolvimento, a aplicação terá que cumprir com os objetivos listados a seguir:
 
 #### 1) Modelagem de dados
 
@@ -43,13 +43,13 @@ A aplicação deverá expor os seguintes serviços REST:
 
 Ao final, todos os JUnits que estão disponíveis nesse projeto deverão executar com sucesso.
 
-## Desafios
+## Desafios Bônus
 
 Serão considerados como um diferencial em sua avaliação, a implementação de ao menos um dos seguintes desafios:
 
 * Percentual elevado de cobertura de testes com cenários não implementados :)
 * Criação de um serviço adicional para consulta da categoria com a maior ocorrência de uma determinada letra em seu nome. Por exemplo, se tivermos a categoria **Brinquedos** e a categoria **Medicamentos** e eu chamar este serviço passando como parâmetro a letra "e" o retorno do serviço deverá ser a categoria **Medicamentos** :D
-* Execução de testes unitários e integrados em ciclo de build distintos ¯\_(ツ)_/¯
+* Execução de testes unitários e integrados em ciclo de build distintos ¯\\_(ツ)_/¯
 
 >
 > Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
