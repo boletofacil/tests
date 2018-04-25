@@ -24,10 +24,10 @@ Elaborar um projeto mobile que faça buscas de repositórios no Github:
 
 * Integração com Firebase Realtime Database.
 
-# Outros
+## Considerações
 
 * Você é livre para decidir o layout, mas ele deve ser responsivo.
 
-* Linguagem: Kotlin (Android) ou Swift (iOS)
+* Linguagem a ser utilizada: Kotlin (Android) ou Swift (iOS)
 
 * Ao final, compartilhar o projeto com o usuário @boletofacil
