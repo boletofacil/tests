@@ -69,4 +69,10 @@ public class ProductControllerTest {
 		.andExpect(jsonPath("$[2].id", is(8)))
 		.andExpect(jsonPath("$[2].name", is("Estante")));
 	}
+	
+	@Test
+	public void listByNonExistentCategory() throws Exception {
+		mockMvc.perform(get("/product/listByCategory/99"))
+			.andExpect(status().isNoContent());
+	}
 }
