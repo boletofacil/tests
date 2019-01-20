@@ -30,7 +30,7 @@ public class ProductControllerTest {
 
 	@Before
     public void setup() throws Exception {
-        this.mockMvc = webAppContextSetup(webApplicationContext).build();
+		this.mockMvc = webAppContextSetup(webApplicationContext).build();
 	}
 
 	@Test
@@ -68,5 +68,14 @@ public class ProductControllerTest {
 		.andExpect(jsonPath("$[1].name", is("Mesa")))
 		.andExpect(jsonPath("$[2].id", is(8)))
 		.andExpect(jsonPath("$[2].name", is("Estante")));
+	}
+
+	@Test
+	public void isFeijãoPartOfAlimentosCategory() throws Exception {
+		mockMvc.perform(get("/product/listByCategory/1"))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$", hasSize(2)))
+				.andExpect(jsonPath("$[1].id", is(2)))
+				.andExpect(jsonPath("$[1].category.name", is("Alimentos")));
 	}
 }

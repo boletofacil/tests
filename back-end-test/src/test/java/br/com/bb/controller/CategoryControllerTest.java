@@ -37,7 +37,7 @@ public class CategoryControllerTest {
     public void listAll() throws Exception {
         mockMvc.perform(get("/category/listAll"))
         .andExpect(status().isOk())
-	    		.andExpect(jsonPath("$", hasSize(3)))
+	    		.andExpect(jsonPath("$", hasSize(4)))
 	        .andExpect(jsonPath("$[0].id", is(1)))
 	        .andExpect(jsonPath("$[0].name", is("Alimentos")))
 	        .andExpect(jsonPath("$[1].id", is(2)))
@@ -45,4 +45,11 @@ public class CategoryControllerTest {
 	        .andExpect(jsonPath("$[2].id", is(3)))
 	        .andExpect(jsonPath("$[2].name", is("Móveis")));
     }
+
+	@Test
+	public void checkMostUsedCategory() throws Exception {
+		mockMvc.perform(get("/category/findMostUsedCategory"))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.name", is("Acessórios")));
+	}
 }
