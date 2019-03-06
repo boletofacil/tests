@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS category;
+DROP TABLE IF EXISTS product;
+
+CREATE TABLE category (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE product (
+	id INTEGER NOT NULL AUTO_INCREMENT,
+	name VARCHAR(255) NOT NULL,
+	category_id INTEGER,
+    PRIMARY KEY (id),
+    FOREIGN KEY (category_id) REFERENCES category(id)
+);
+
