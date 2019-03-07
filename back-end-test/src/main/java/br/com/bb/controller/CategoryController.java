@@ -1,4 +1,4 @@
-package br.com.bb.conntroller;
+package br.com.bb.controller;
 
 import java.util.List;
 
