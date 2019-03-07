@@ -2,22 +2,27 @@ package br.com.bb.service.product;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import br.com.bb.model.product.Product;
 
 /**
- * TODO - Descrever o motivo da classe ter sido criada.
+ * Service responsável pelas operações com {@link Product}
  *
  * @author dierka
- * @since 1.0 (04/03/19)
+ * @since 1.0 (07/03/19)
  */
 public interface ProductService {
 
-    Product findOne(Integer integer);
-
+    /**
+     * Listar todos os registros de {@link Product}
+     * @return {@link List<Product>}
+     */
     List<Product> findAll();
 
-    List<Product> findByCategory(Integer id);
+    /**
+     * Listar todos os registros de {@link Product}, filtrando por CategoryId.
+     * @param categoryId - {@link Integer} que representa o id de uma {@link br.com.bb.model.category.Category}
+     * @return {@link List<Product>}
+     */
+    List<Product> findByCategory(Integer categoryId);
 
 }
