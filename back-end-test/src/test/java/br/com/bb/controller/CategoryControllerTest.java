@@ -38,12 +38,41 @@ public class CategoryControllerTest {
     public void listAll() throws Exception {
         mockMvc.perform(get("/category/listAll"))
         .andExpect(status().isOk())
-	    		.andExpect(jsonPath("$", hasSize(3)))
+	    		.andExpect(jsonPath("$", hasSize(5)))
 	        .andExpect(jsonPath("$[0].id", is(1)))
 	        .andExpect(jsonPath("$[0].name", is("Alimentos")))
 	        .andExpect(jsonPath("$[1].id", is(2)))
 	        .andExpect(jsonPath("$[1].name", is("Eletrodomésticos")))
 	        .andExpect(jsonPath("$[2].id", is(3)))
-	        .andExpect(jsonPath("$[2].name", is("Móveis")));
+	        .andExpect(jsonPath("$[2].name", is("Móveis")))
+    		.andExpect(jsonPath("$[3].id", is(4)))
+	        .andExpect(jsonPath("$[3].name", is("Brinquedos")))
+    		.andExpect(jsonPath("$[4].id", is(5)))
+	        .andExpect(jsonPath("$[4].name", is("Medicamentos")));
+        
     }
+	
+	@Test
+	public void maxcharoccurrenceE() throws Exception{
+		mockMvc.perform(get("/category/maxcharoccurrence/e"))
+        .andExpect(status().isOk())
+	    		.andExpect(jsonPath("$.id", is(5)))
+		        .andExpect(jsonPath("$.name", is("Medicamentos")));
+	}
+	
+	@Test
+	public void maxcharoccurrenceM() throws Exception{
+		mockMvc.perform(get("/category/maxcharoccurrence/m"))
+        .andExpect(status().isOk())
+	    		.andExpect(jsonPath("$.id", is(5)))
+		        .andExpect(jsonPath("$.name", is("Medicamentos")));
+	}
+	
+	@Test
+	public void maxcharoccurrenceV() throws Exception{
+		mockMvc.perform(get("/category/maxcharoccurrence/v"))
+        .andExpect(status().isOk())
+	    		.andExpect(jsonPath("$.id", is(3)))
+		        .andExpect(jsonPath("$.name", is("Móveis")));
+	}
 }

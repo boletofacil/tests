@@ -1,6 +1,8 @@
 INSERT INTO category (name) VALUES ('Alimentos');
 INSERT INTO category (name) VALUES ('Eletrodomésticos');
 INSERT INTO category (name) VALUES ('Móveis');
+INSERT INTO category (name) VALUES ('Brinquedos');
+INSERT INTO category (name) VALUES ('Medicamentos');
 
 INSERT INTO product (name, category_id) VALUES ('Arroz', 1);
 INSERT INTO product (name, category_id) VALUES ('Feijão', 1);

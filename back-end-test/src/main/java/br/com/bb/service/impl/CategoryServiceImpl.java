@@ -20,5 +20,27 @@ public class CategoryServiceImpl implements CategoryService{
 		return categoryRepository.findAll();
 	}
 
+	@Override
+	public Category getCategorieWithMaxCharOccurrence(char findFor) {
+		
+		List<Category> categories = this.findAll();
+		
+		Category categoryResult = new Category();
+		Long maxOccurrences = 0L;
+		
+		for (Category category : categories) {
+			
+			Long catgoryOccurences = category.getName().toLowerCase().chars().filter(ch -> ch == findFor).count();
+			
+			if(catgoryOccurences >= maxOccurrences) {
+				maxOccurrences = catgoryOccurences;
+				categoryResult = category;
+			}
+			
+		}
+		
+		return categoryResult;
+	}
+
 	
 }
