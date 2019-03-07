@@ -24,7 +24,7 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
     List<Product> findAll();
 
     /**
-     *
+     * Listar todos os registros de {@link Product}, filtrando por CategoryId.
      * @param categoryId - {@link Integer} que representa o id de uma {@link br.com.bb.model.category.Category}
      * @return {@link List<Product>}
      */
