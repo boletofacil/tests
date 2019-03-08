@@ -18,7 +18,7 @@ import br.com.bb.model.Category;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
 @WebAppConfiguration
-public class CategorieWithMaxCharOccurrenceTest {
+public class UnitCategorieWithMaxCharOccurrenceTest {
 
 	@Autowired
 	private CategorieWithMaxCharOccurrence categorieWithMaxCharOccurrence;
