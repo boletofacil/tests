@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import br.com.bb.exception.CategoryNotFoundException;
 import br.com.bb.maxoccurrence.CategorieWithMaxCharOccurrence;
 import br.com.bb.model.Category;
 import br.com.bb.repository.CategoryRepository;
@@ -26,7 +27,13 @@ public class CategoryServiceImpl implements CategoryService{
 
 	@Override
 	public Category getCategorieWithMaxCharOccurrence(char findFor) {
-		return categorieWithMaxCharOccurrence.getCategorieWithMaxCharOccurrence(this.findAll(), findFor);
+		Category category = categorieWithMaxCharOccurrence.getCategorieWithMaxCharOccurrence(this.findAll(), findFor);
+		
+		if(category == null) {
+			throw new CategoryNotFoundException("Nenhuma categoria encontrada para o filtro informado.");
+		}
+		
+		return category;
 	}
 
 	

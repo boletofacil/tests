@@ -16,10 +16,10 @@ public class CategorieWithMaxCharOccurrence {
 		
 		for (Category category : categories) {
 			
-			Long catgoryOccurences = category.getName().toLowerCase().chars().filter(ch -> ch == findFor).count();
+			Long categoryOccurences = category.getName().toLowerCase().chars().filter(ch -> ch == findFor).count();
 			
-			if(catgoryOccurences >= maxOccurrences) {
-				maxOccurrences = catgoryOccurences;
+			if(categoryOccurences > 0 && categoryOccurences >= maxOccurrences) {
+				maxOccurrences = categoryOccurences;
 				categoryResult = category;
 			}
 			
