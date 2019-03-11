@@ -2,7 +2,7 @@
 
 Elaborar um projeto front-end para consultar a API da Marvel (https://developer.marvel.com/).
 
-## [](https://github.com/boletofacil/tests/tree/master/mobile-test#objetivos)Objetivos
+## [](https://github.com/boletofacil/tests/tree/master/front-end-test#objetivos)Objetivos
 
 - Consultar o endpoint [/v1/public/characters](https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0)
 
@@ -30,7 +30,7 @@ Elaborar um projeto front-end para consultar a API da Marvel (https://developer.
 
 - Testes unitários por componentes.
 
-## [](https://github.com/boletofacil/tests/tree/master/mobile-test#considera%C3%A7%C3%B5es)Considerações
+## [](https://github.com/boletofacil/tests/tree/master/front-end-test#considera%C3%A7%C3%B5es)Considerações
 
 -   Você é livre para decidir o layout, mas ele deve ser responsivo.
     
