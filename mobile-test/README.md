@@ -28,6 +28,6 @@ Elaborar um projeto mobile que faça buscas de repositórios no Github:
 
 * Você é livre para decidir o layout, mas ele deve ser responsivo.
 
-* Linguagem a ser utilizada: Kotlin (Android) ou Swift (iOS)
+* Linguagem a ser utilizada: Kotlin (Android) ou Swift (iOS).
 
-* Ao final, compartilhar o projeto com o usuário @boletofacil
+* Ao final, versionar o código no GitHub (ou na plataforma de sua preferência) nos enviar o link.
