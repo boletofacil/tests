@@ -1,0 +1,21 @@
+
+/**
+ * Import fonts to the project
+ */
+@import url('https://fonts.googleapis.com/css?family=Marvel&display=swap');
+
+/*
+ * Define theme color to be incorporated in Bootstrap styles
+ */
+$theme-colors: (
+  'marvel': #ed1d24
+);
+
+/**
+  * Import Bootstrap styles framework
+  */
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+* {
+  font-family: 'Marvel', sans-serif;
+}
