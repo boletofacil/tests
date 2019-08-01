@@ -1,24 +1,32 @@
 import React from 'react'
-import Header from './components/layout/Header'
 import marvel from './services/MarvelApiSearch'
+import Header from './components/layout/Header'
+import Main from './components/layout/Main'
 
 export default class App extends React.Component {
 
   state = {
+    loading: false,
+    isLoaded: false,
     search: []
   }
 
   componentDidMount() {
-    this.onSubmitSearch()
+    this.submitSearch()
   }
 
-  onSubmitSearch = e => {
+  submitSearch = search => {
+    this.setState({
+      loading: true,
+      isLoaded: true
+    })
     // TODO: activate AJAX
     // e.preventDefault()
     // marvel.search('c')
     //   .then(res => localStorage.marvel = JSON.stringify(res.data.data.results))
     //   .catch(err => console.log(err))
     this.setState({
+      loading: false,
       search: JSON.parse(localStorage.marvel)
     })
   }
@@ -27,14 +35,12 @@ export default class App extends React.Component {
     return (
       <div>
         <Header />
-        <div>
-          <div className="container">
-            <h2>Hello, world!</h2>
-            <ul>
-              {this.state.search.map(i => <li key={i.id}>{i.name}</li>)}
-            </ul>
-          </div>
-        </div>
+        <Main
+          loading={this.state.loading}
+          isLoaded={this.state.isLoaded}
+          results={this.state.search}
+          submitSearch={this.submitSearch}
+        />
       </div>
     )
   }

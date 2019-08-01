@@ -3,10 +3,10 @@ import logo from './../../assets/logo-marvel.png'
 
 export default function Header() {
   return (
-    <div className="container-fluid py-4" style={{ backgroundColor: '#ed1d24' }}>
+    <div className="container-fluid py-4 bg-marvel">
       <div className="mx-auto w-25">
         <figure className="figure w-100">
-          <img className="figure-img img-fluid" src={ logo } alt="Logotipo da Marvel Comics" />
+          <img className="figure-img img-fluid" src={ logo } alt="Marvel Comics logo" />
         </figure>
         <h1 className="h6 text-white px-1" aria-hidden="true" style={{ textAlignLast: 'justify', zIndex: 1, marginTop: '-24px' }}>
           C H A R A C T E R S

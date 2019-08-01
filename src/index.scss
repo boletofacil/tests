@@ -12,10 +12,23 @@ $theme-colors: (
 );
 
 /**
-  * Import Bootstrap styles framework
-  */
+ * Import Bootstrap styles framework
+ */
 @import 'node_modules/bootstrap/scss/bootstrap';
 
+/**
+ * Additional custom styles
+ */
 * {
   font-family: 'Marvel', sans-serif;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: #ed1d24;
+}
+
+::selection {
+  color: #fff;
+  background: #ed1d24;
 }
