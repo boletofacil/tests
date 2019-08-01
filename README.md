@@ -13,7 +13,7 @@ This is an application developed as a challenge, proposed by the company [Juno](
 
 [Take a look at the app in production!](https://jjsolutions.net/)
 
-<!-- ![Marvel Characters](./app-overview.jpg) -->
+![Marvel Characters](./app-overview.jpg)
 
 ## Main Objectives
 
