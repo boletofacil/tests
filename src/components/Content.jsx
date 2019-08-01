@@ -11,7 +11,6 @@ class Content extends React.Component {
   }
 
   toggleDetails = (record = null) => {
-    console.log(this.state)
     this.setState({
       isShowingDetails: !!record,
       detailsFor: record

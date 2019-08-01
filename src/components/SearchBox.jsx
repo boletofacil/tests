@@ -13,13 +13,9 @@ class SearchBox extends React.Component {
     })
   }
 
-  onSumit = e => {
+  onSubmit = e => {
     e.preventDefault()
-    this.submitSearch(e.target.value)
-  }
-
-  submitSearch = search => {
-    this.props.submitSearch(search)
+    this.props.submitSearch(this.state.search)
   }
 
   getFontSize = () => {
@@ -30,14 +26,14 @@ class SearchBox extends React.Component {
 
   render() {
     return (
-      <form role="search" className="px-2 pt-4" onSubmit={this.onSumit}>
+      <form role="search" className="px-2 pt-4 pb-2" onSubmit={this.onSubmit}>
         <div className="form-group">
           <label htmlFor="search-box" className="h5">Start typing the name of your character:</label>
           <div className="row align-middle px-2">
             <input
               id="search-box"
               type="text"
-              className="form-control text-marvel col-10 col-lg-11 rounded-0"
+              className="form-control border-marvel col-10 col-lg-11 rounded-0"
               style={this.getFontSize()}
               placeholder="e.g.: &quot;captain&quot;"
               value={this.state.search}

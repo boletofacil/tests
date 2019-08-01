@@ -8,27 +8,23 @@ export default class App extends React.Component {
   state = {
     loading: false,
     isLoaded: false,
-    search: []
+    searchResponse: {}
   }
 
-  componentDidMount() {
-    this.submitSearch()
-  }
-
-  submitSearch = search => {
+  submitSearch = (search, page = 1) => {
+    console.log(search)
     this.setState({
       loading: true,
       isLoaded: true
     })
-    // TODO: activate AJAX
-    // e.preventDefault()
-    // marvel.search('c')
-    //   .then(res => localStorage.marvel = JSON.stringify(res.data.data.results))
-    //   .catch(err => console.log(err))
-    this.setState({
-      loading: false,
-      search: JSON.parse(localStorage.marvel)
-    })
+    marvel.search(search, page)
+      .then(response => {
+        this.setState({
+          loading: false,
+          searchResponse: response.data
+        })
+      })
+      .catch(err => console.error(err))
   }
 
   render() {
@@ -38,7 +34,7 @@ export default class App extends React.Component {
         <Main
           loading={this.state.loading}
           isLoaded={this.state.isLoaded}
-          results={this.state.search}
+          response={this.state.searchResponse}
           submitSearch={this.submitSearch}
         />
       </div>

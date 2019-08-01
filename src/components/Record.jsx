@@ -7,7 +7,7 @@ class Record extends React.Component {
     const { thumbnail, name } = this.props.data
     return (
       <div className="col-12 col-md-6">
-        <div className="card">
+        <div className="card mb-3 border-marvel">
           <div className="card-body">
             <img
               src={`${thumbnail.path}.${thumbnail.extension}`}

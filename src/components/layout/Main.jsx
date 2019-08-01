@@ -9,11 +9,17 @@ class Main extends React.Component {
 
   setBackground = () => {
     return {
+      minHeight: '100%',
+      minWidth: '1080px',
+      height: '100%',
+      width: 'auto',
+      top: '0',
+      left: '0',
       background: `
         url(${background})
         top
         center
-        no-repeat
+        fixed
       `
     }
   }
@@ -33,7 +39,7 @@ class Main extends React.Component {
         return (
           <React.Fragment>
             <hr/>
-            <Content results={this.props.results} />
+            <Content results={this.props.response.data.results} />
           </React.Fragment>
         )
       }
@@ -42,7 +48,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className="py-3" style={this.setBackground()}>
+      <div className="container-fluid py-5" style={this.setBackground()}>
         <div className="container bg-white">
           <SearchBox submitSearch={this.props.submitSearch} />
           {this.displayResults()}
@@ -55,7 +61,7 @@ class Main extends React.Component {
 Main.propTypes = {
   loading: PropTypes.bool.isRequired,
   isLoaded: PropTypes.bool.isRequired,
-  results: PropTypes.array.isRequired,
+  response: PropTypes.object.isRequired,
   submitSearch: PropTypes.func.isRequired
 }
 
