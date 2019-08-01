@@ -1,5 +1,5 @@
 
-# **Marvel Characters** - Your wiki for Marvel Comics Universe
+# Marvel Characters - Your wiki for MCU
 
 - **Develepoled by:** [Julio L. Muller](https://github.com/juliolmuller)
 - **Released on:** Aug 1, 2019
@@ -15,78 +15,54 @@ This is an application developed as a challenge, proposed by the company [Juno](
 
 <!-- ![Marvel Characters](./app-overview.jpg) -->
 
-Elaborar um projeto front-end para consultar a API da Marvel (https://developer.marvel.com/).
+## Main Objectives
 
-## Objetivos
+The aaplication consumes [Marvel API endpoint for characters](https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0) and meets the following mandatory requirements:
 
-- Consultar o endpoint [/v1/public/characters](https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0)
-  - Exibir campo de busca para que o usuário digite o termo filtrando o campo `nameStartsWith`;
-  - Exibir os resultados da busca (resumidamente);
-  - Ao abrir um item do resultado da busca, exibir mais informações daquele item;
-  - Quando houver uma ocorrência de thumbnail deverá ser exibida a imagem como melhor convier para a interface;
-- A interface deverá ser obrigatoriamente responsiva;
-- A entrega deverá conter um arquivo .MD detalhando o projeto.
+- :heavy_check_mark: Display a search input for the user to filter the field `nameStartsWith`;
+- :heavy_check_mark: Display search result (summarized);
+- :heavy_check_mark: When opening an item, displat its details;
+- :heavy_check_mark: Display responsive thumbnails (that better fits the screen) for the items which has it;
+- :heavy_check_mark: Interface MUSTt be responsive;
+- :heavy_check_mark: The final project must contain a `.MD` file with specifications of the project.
+- :heavy_check_mark: Develop the application using React and Node.js (with ES6+)
 
-## Bônus opcional
+### Optional bonus
 
-- Paginação;
-- SASS;
-- Transitions;
-- Rotinas Node e configurações adicionais para o ambiente;
-- Testes unitários por componentes.
+- :heavy_check_mark: Pagination;
+- :warning: SASS (implemented for Bootstrap and additional styles customization);
+- :x: Transitions;
+- :heavy_check_mark: Project watchers and routines with Node.js and other enviromental utilities;
+- :x: Unit tests by componnent.
 
-## Considerações
+## Setting Up the Enviroment
 
-Você é livre para decidir o layout, mas ele deve ser responsivo.
+To reproduce the development enviroment locally you may start downloading the compacted folder of the project or use **Git** to clone the repository (recommended):
 
-- Linguagem a ser utilizada: Node + React, utilizando JS com ES6.
-- Ao final, compartilhar o projeto com o usuário @boletofacil
+```bash
+git clone https://github.com/juliolmuller/marvel-characters
+```
+
+Afterwards, you will also need **Node.js** to download the packages dependencies and run the development routines:
+
+```bash
+npm install
+```
+
+You may find this 2 tools in their respective web sites:
+
+- **Git:** (https://php.net/)
+- **Node.js:** (https://nodejs.org/)
+
+Additionally, you also must sign up to the [Marvel Development Portal](https://developer.marvel.com/) to generate your application keys, so your web application can consume their application programming interface (API).
+
+Once you generate your keys, you will need to inport them into the project. For that, rename the file `env.js.example' (inside directory `src/config`) to 'env.js`, and paste **PUBLIC** and **PRIVATE** hashes in the respective places. 
+
+You should be ready for coding now!
+
+Run `npm start` and you are good to go!.
 
 <!--
-## How to Set Up the Enviroment
-
-Marvel Characters is a web application developed with PHP Laravel and MySQL. So, to get it up and running in your local enviroment, you are going to meet a few requirements.
-
-### Software Required
-
-Make sure you have the following applications installed and have their enviroment variables properly configured:
-
-- [PHP 7.2+](https://php.net/)
-- [Composer](https://getcomposer.org/)
-- [Node.js](https://nodejs.org/)
-- [MySQL](https://www.mysql.com/)
-
-### Dependencies Installation
-
-After downloading or cloning this repository, run the following command lines inside your project directory:
-
-```bash
-composer install
-```
-
-### Database Connection Setup
-
-To allow Laravel to access setup database schema and connect to it, do through the following steps:
-
-1. Rename the file `.env.example`, in project root, to `.env`;
-2. In this file, change all the values attributed to those variables prefixed with `DB_*` according to your local database configuration;
-3. Inside your database server, create a database, with the same name of the variable `DB_DATABASE` you just set;
-4. Run laravel migration to create the required tables and to seed them with the initial configuration:
-
-```bash
-php artisan migrate --seed
-```
-
-The parameter `--seed` already insert the 5 chosen languages (PHP, Java, JavaScript, Python & C#) into table `languages` and pulls fresh data for `repositories` from the GitHub API for each one of those languages.
-
-### Run the Server
-
-For Laravel projects, you can use the web server of your choice, like Apache, you just need to point the application root as being the `/public/` folder. However, you can run the embeded Laravel's server instead, by running the following command line, in the project root:
-
-```bash
-php artisan serve
-```
-
 ## Automated Tests
 
 As part of the challenge, the project should contain scripts for testing (included in `/tests` folder). To run it, execute the following command line:
