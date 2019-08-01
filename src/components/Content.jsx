@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Record from './Record'
+import Details from './Details'
 
 class Content extends React.Component {
 
@@ -9,14 +10,20 @@ class Content extends React.Component {
     detailsFor: null
   }
 
-  showDetails = record => {
+  toggleDetails = (record = null) => {
+    console.log(this.state)
     this.setState({
+      isShowingDetails: !!record,
       detailsFor: record
     })
   }
 
   getDetails = () => {
-    console.log(this.state.detailsFor)
+    if (this.state.detailsFor) {
+      return (
+        <Details character={this.state.detailsFor} hideDetails={this.toggleDetails} />
+      )
+    }
   }
 
   render() {
@@ -28,7 +35,7 @@ class Content extends React.Component {
               <Record
                 key={record.id}
                 data={record}
-                showDetails={this.showDetails}
+                showDetails={this.toggleDetails}
               />
             )
           })

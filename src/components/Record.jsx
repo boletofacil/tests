@@ -15,7 +15,7 @@ class Record extends React.Component {
               style={{ maxHeight: '4em' }}
               alt="Character thumbnail"
             />
-            <div style={{ marginLeft: '5em' }}>
+            <div className="text-center" style={{ marginLeft: '5em' }}>
               <h3 className="card-title text-truncate h5" title={name}>{name}</h3>
               <div className="card-text text-center">
                 <button
