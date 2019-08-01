@@ -55,7 +55,8 @@ class Main extends React.Component {
 Main.propTypes = {
   loading: PropTypes.bool.isRequired,
   isLoaded: PropTypes.bool.isRequired,
-  results: PropTypes.array.isRequired
+  results: PropTypes.array.isRequired,
+  submitSearch: PropTypes.func.isRequired
 }
 
 export default Main

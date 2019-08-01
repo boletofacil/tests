@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default class SearchBox extends React.Component {
+class SearchBox extends React.Component {
 
   state = {
     search: ''
@@ -29,7 +30,7 @@ export default class SearchBox extends React.Component {
 
   render() {
     return (
-      <form role="search" className="p-2 pt-4" onSubmit={this.onSumit}>
+      <form role="search" className="px-2 pt-4" onSubmit={this.onSumit}>
         <div className="form-group">
           <label htmlFor="search-box" className="h5">Start typing the name of your character:</label>
           <div className="row align-middle px-2">
@@ -53,3 +54,9 @@ export default class SearchBox extends React.Component {
     )
   }
 }
+
+SearchBox.propTypes = {
+  submitSearch: PropTypes.func.isRequired
+}
+
+export default SearchBox
