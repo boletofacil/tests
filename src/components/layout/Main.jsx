@@ -9,9 +9,9 @@ class Main extends React.Component {
 
   setBackground = () => {
     return {
-      minHeight: '100%',
+      maxHeight: '100%',
       minWidth: '1080px',
-      height: '100%',
+      height: '720px',
       width: 'auto',
       top: '0',
       left: '0',
@@ -39,7 +39,12 @@ class Main extends React.Component {
         return (
           <React.Fragment>
             <hr/>
-            <Content results={this.props.response.data.results} />
+            <Content
+              response={this.props.response}
+              currentPage={this.props.currentPage}
+              submitSearch={this.props.submitSearch}
+              gotoPage={this.props.gotoPage}
+            />
           </React.Fragment>
         )
       }
@@ -62,7 +67,9 @@ Main.propTypes = {
   loading: PropTypes.bool.isRequired,
   isLoaded: PropTypes.bool.isRequired,
   response: PropTypes.object.isRequired,
-  submitSearch: PropTypes.func.isRequired
+  currentPage: PropTypes.number.isRequired,
+  submitSearch: PropTypes.func.isRequired,
+  gotoPage: PropTypes.func.isRequired
 }
 
 export default Main

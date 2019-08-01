@@ -8,23 +8,39 @@ export default class App extends React.Component {
   state = {
     loading: false,
     isLoaded: false,
-    searchResponse: {}
+    searchResponse: {},
+    lastSearch: '',
+    currentPage: 1
   }
 
   submitSearch = (search, page = 1) => {
-    console.log(search)
     this.setState({
       loading: true,
-      isLoaded: true
+      isLoaded: true,
+      lastSearch: search,
+      currentPage: page
     })
     marvel.search(search, page)
-      .then(response => {
-        this.setState({
-          loading: false,
-          searchResponse: response.data
-        })
+    .then(response => {
+      this.setState({
+        searchResponse: response.data.data
       })
-      .catch(err => console.error(err))
+    })
+    .catch(err => {
+      console.error(err)
+      this.setState({
+        isLoaded: false
+      })
+    })
+    .finally(() => {
+      this.setState({
+        loading: false
+      })
+    })
+  }
+
+  gotoPage = page => {
+    this.submitSearch(this.state.lastSearch, page)
   }
 
   render() {
@@ -35,7 +51,9 @@ export default class App extends React.Component {
           loading={this.state.loading}
           isLoaded={this.state.isLoaded}
           response={this.state.searchResponse}
+          currentPage={this.state.currentPage}
           submitSearch={this.submitSearch}
+          gotoPage={this.gotoPage}
         />
       </div>
     )

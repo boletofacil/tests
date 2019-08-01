@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Record from './Record'
 import Details from './Details'
+import Pagination from './Pagination'
 
 class Content extends React.Component {
 
@@ -17,6 +18,18 @@ class Content extends React.Component {
     })
   }
 
+  hasPages = () => {
+    if (this.props.response.total > this.props.response.limit) {
+      return (
+        <Pagination
+          response={this.props.response}
+          currentPage={this.props.currentPage}
+          gotoPage={this.props.gotoPage}
+        />
+      )
+    }
+  }
+
   getDetails = () => {
     if (this.state.detailsFor) {
       return (
@@ -27,9 +40,10 @@ class Content extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="pb-4">
+        {this.hasPages()}
         <div className="row">
-          {this.props.results.map(record => {
+          {this.props.response.results.map(record => {
             return (
               <Record
                 key={record.id}
@@ -40,14 +54,18 @@ class Content extends React.Component {
           })
         }
         </div>
+        {this.hasPages()}
         {this.getDetails()}
-      </React.Fragment>
+      </div>
     )
   }
 }
 
 Content.propTypes = {
-  results: PropTypes.array.isRequired
+  response: PropTypes.object.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  submitSearch: PropTypes.func.isRequired,
+  gotoPage: PropTypes.func.isRequired
 }
 
 export default Content

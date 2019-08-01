@@ -6,7 +6,6 @@ class Details extends React.Component {
 
   componentDidMount() {
     $('#character-details').on('hidden.bs.modal', event => {
-      console.log('modal')
       this.props.hideDetails.bind(this)
     })
     this.componentDidUpdate()
