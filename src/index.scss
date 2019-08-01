@@ -23,6 +23,15 @@ $theme-colors: (
   font-family: 'Marvel', sans-serif;
 }
 
+body {
+  background-image: url('assets/background.jpg');
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000;
+  width: 100%;
+}
+
 ::-moz-selection { /* Code for Firefox */
   color: #fff;
   background: #ed1d24;
