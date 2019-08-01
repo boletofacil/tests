@@ -1,12 +1,14 @@
 import React from 'react'
+import Header from './components/layout/Header'
 
 export default class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="text-center">
-          <h1>Hello, world!</h1>
+      <div>
+        <Header />
+        <div className="container">
+          <h2>Hello, world!</h2>
         </div>
       </div>
     )
