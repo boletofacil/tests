@@ -1,6 +1,6 @@
 {
   "name": "juno-application",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://www.jjsolutions.net/portfolio/marvel-characters/",
   "private": true,
   "dependencies": {

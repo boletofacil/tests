@@ -13,6 +13,7 @@ class Details extends React.Component {
 
   componentDidUpdate() {
     $('#character-details').modal('show')
+    $('body').css('padding-right', '')
   }
 
   render() {
@@ -22,13 +23,15 @@ class Details extends React.Component {
         <div className="modal-dialog" role="document">
           <div id="modal-content" className="modal-content">
             <div className="modal-header text-center d-block">
+              <div className="text-right">
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
               <figure className="figure w-50 mx-auto">
                 <img className="figure-img img-fluid" style={{ borderRadius: '50%' }} src={`${thumbnail.path}.${thumbnail.extension}`} alt="Character thumbnail" />
               </figure>
               <h1 className="modal-title">{name}</h1>
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
             </div>
             <div className="modal-body text-center">
               <p className="h5">{description || <span className="font-italic">No description</span>}</p>
@@ -47,8 +50,11 @@ class Details extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="modal-footer">
-              <a href={urls[0].url} id="modal-link" className="btn btn-marvel rounded-0">
+            <div className="modal-footer d-flex justify-content-between">
+              <button type="button" className="btn btn-light rounded-0" data-dismiss="modal">
+                Close
+              </button>
+              <a href={urls[0].url} className="btn btn-marvel rounded-0">
                 Official Marvel Page
               </a>
             </div>

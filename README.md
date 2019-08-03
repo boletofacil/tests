@@ -4,7 +4,7 @@
 - **Develepoled by:** [Julio L. Muller](https://github.com/juliolmuller)
 - **Released on:** Jul 31, 2019
 - **Updated on:** Aug 2, 2019
-- **Latest version:** 1.0.2
+- **Latest version:** 1.0.3
 - **License:** MIT
 
 ## Overview

@@ -32,6 +32,10 @@ body {
   width: 100%;
 }
 
+.modal-open {
+  overflow: scroll;
+}
+
 ::-moz-selection { /* Code for Firefox */
   color: #fff;
   background: #ed1d24;
