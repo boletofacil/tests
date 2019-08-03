@@ -3,15 +3,15 @@
 
 - **Develepoled by:** [Julio L. Muller](https://github.com/juliolmuller)
 - **Released on:** Jul 31, 2019
-- **Updated on:** Aug 1, 2019
-- **Latest version:** 1.0.1
+- **Updated on:** Aug 2, 2019
+- **Latest version:** 1.0.2
 - **License:** MIT
 
 ## Overview
 
 This is an application developed as a challenge, proposed by the company [Juno](https://www.juno.com.br/). The application consumes Marvel API, performing a search in the characters of the Marvel Universe and displaying their details. The main objective was to develop a fully responsive front-end web application using React library.
 
-[Take a look at the app in production!](https://jjsolutions.net/)
+[Take a look at the app in production!](https://jjsolutions.net/portfolio/marvel-characters/)
 
 ![Marvel Characters](./app-overview.jpg)
 

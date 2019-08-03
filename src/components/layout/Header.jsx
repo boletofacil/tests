@@ -8,9 +8,18 @@ export default function Header() {
         <figure className="figure w-100">
           <img className="figure-img img-fluid" src={ logo } alt="Marvel Comics logo" />
         </figure>
-        <h1 className="h6 text-white px-1" aria-hidden="true" style={{ textAlignLast: 'justify', zIndex: 1, marginTop: '-24px' }}>
-          C H A R A C T E R S
-        </h1>
+        <div className="h6 text-white px-1 d-flex justify-content-between" aria-hidden="true" style={{ zIndex: 1, marginTop: '-24px' }}>
+          <div>C</div>
+          <div>H</div>
+          <div>A</div>
+          <div>R</div>
+          <div>A</div>
+          <div>C</div>
+          <div>T</div>
+          <div>E</div>
+          <div>R</div>
+          <div>S</div>
+        </div>
         <h1 className="sr-only">
           Chracters of the Marvel Comics Universe
         </h1>
