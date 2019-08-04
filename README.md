@@ -74,3 +74,19 @@ Here are the main technologies used to build this project:
 - JS Package Manager: [Node.js](https://nodejs.org/en/)
 - Versioning Tool: [Git](https://git-scm.com/)
 - Remote Repository: [GitHub](https://github.com/)
+
+## Release Notes
+
+<!-- - **1.1**
+  - Changed API search param from `nameStartsWith` to `name`;
+  - Added page footer;
+  - Added link to project repository. -->
+- **1.0**
+  - Stable release of the application.
+
+## Know Issues
+
+- ~~Background image misdisplaied in browsers of mobile devices~~ (addressed in version 1.0.1)
+- ~~Title _CHARACTERS_ spliting in multiple rows~~ (addressed in version 1.0.1)
+- ~~Laggy behavior due to scroll bar hiding when opening the Bootstrap modal~~ (addressed in version 1.0.2)
+- ~~Modal close button wrongly placed~~ (addressed in version 1.0.2)
