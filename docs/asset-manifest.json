@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/marvel-characters/static/css/main.48317da9.chunk.css",
-    "main.js": "/portfolio/marvel-characters/static/js/main.c4784d7d.chunk.js",
-    "main.js.map": "/portfolio/marvel-characters/static/js/main.c4784d7d.chunk.js.map",
-    "runtime~main.js": "/portfolio/marvel-characters/static/js/runtime~main.68415554.js",
-    "runtime~main.js.map": "/portfolio/marvel-characters/static/js/runtime~main.68415554.js.map",
-    "static/js/2.c477d108.chunk.js": "/portfolio/marvel-characters/static/js/2.c477d108.chunk.js",
-    "static/js/2.c477d108.chunk.js.map": "/portfolio/marvel-characters/static/js/2.c477d108.chunk.js.map",
-    "index.html": "/portfolio/marvel-characters/index.html",
-    "precache-manifest.1acd86d1ba31a1c99cde751da58c90fa.js": "/portfolio/marvel-characters/precache-manifest.1acd86d1ba31a1c99cde751da58c90fa.js",
-    "service-worker.js": "/portfolio/marvel-characters/service-worker.js",
-    "static/css/main.48317da9.chunk.css.map": "/portfolio/marvel-characters/static/css/main.48317da9.chunk.css.map",
-    "static/media/index.scss": "/portfolio/marvel-characters/static/media/background.78912e00.jpg",
-    "static/media/loading.gif": "/portfolio/marvel-characters/static/media/loading.4b6d7e44.gif",
-    "static/media/logo-marvel.png": "/portfolio/marvel-characters/static/media/logo-marvel.123f631d.png"
+    "main.css": "/marvel-characters/static/css/main.14728e8a.chunk.css",
+    "main.js": "/marvel-characters/static/js/main.255d769d.chunk.js",
+    "main.js.map": "/marvel-characters/static/js/main.255d769d.chunk.js.map",
+    "runtime~main.js": "/marvel-characters/static/js/runtime~main.f118825c.js",
+    "runtime~main.js.map": "/marvel-characters/static/js/runtime~main.f118825c.js.map",
+    "static/js/2.f7f4d051.chunk.js": "/marvel-characters/static/js/2.f7f4d051.chunk.js",
+    "static/js/2.f7f4d051.chunk.js.map": "/marvel-characters/static/js/2.f7f4d051.chunk.js.map",
+    "index.html": "/marvel-characters/index.html",
+    "precache-manifest.21fa87ca90c867d73582671a843b6b01.js": "/marvel-characters/precache-manifest.21fa87ca90c867d73582671a843b6b01.js",
+    "service-worker.js": "/marvel-characters/service-worker.js",
+    "static/css/main.14728e8a.chunk.css.map": "/marvel-characters/static/css/main.14728e8a.chunk.css.map",
+    "static/media/index.scss": "/marvel-characters/static/media/background.78912e00.jpg",
+    "static/media/loading.gif": "/marvel-characters/static/media/loading.4b6d7e44.gif",
+    "static/media/logo-marvel.png": "/marvel-characters/static/media/logo-marvel.123f631d.png"
   }
 }
