@@ -1,10 +1,10 @@
 
 # Marvel Characters - Your wiki for MCU
 
-- **Develepoled by:** [Julio L. Muller](https://github.com/juliolmuller)
+- **Develepoled by:** [Julio L. Muller](https://juliolmuller.github.io/)
 - **Released on:** Jul 31, 2019
-- **Updated on:** Aug 2, 2019
-- **Latest version:** 1.0.3
+- **Updated on:** Sep 4, 2019
+- **Latest version:** 1.0.4
 - **License:** MIT
 
 ## Overview
