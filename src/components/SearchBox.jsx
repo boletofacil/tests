@@ -4,25 +4,23 @@ import PropTypes from 'prop-types'
 class SearchBox extends React.Component {
 
   state = {
-    search: ''
+    search: '',
   }
 
-  onChange = e => {
+  onChange = (e) => {
     this.setState({
-      search: e.target.value
+      search: e.target.value,
     })
   }
 
-  onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault()
     this.props.submitSearch(this.state.search)
   }
 
-  getFontSize = () => {
-    return {
-      fontSize: '2em'
-    }
-  }
+  getFontSize = () => ({
+    fontSize: '2em',
+  })
 
   render() {
     return (
@@ -52,7 +50,7 @@ class SearchBox extends React.Component {
 }
 
 SearchBox.propTypes = {
-  submitSearch: PropTypes.func.isRequired
+  submitSearch: PropTypes.func.isRequired,
 }
 
 export default SearchBox

@@ -17,19 +17,18 @@ class Main extends React.Component {
             </div>
           </React.Fragment>
         )
-      } else {
-        return (
-          <React.Fragment>
-            <hr/>
-            <Content
-              response={this.props.response}
-              currentPage={this.props.currentPage}
-              submitSearch={this.props.submitSearch}
-              gotoPage={this.props.gotoPage}
-            />
-          </React.Fragment>
-        )
       }
+      return (
+        <React.Fragment>
+          <hr/>
+          <Content
+            response={this.props.response}
+            currentPage={this.props.currentPage}
+            submitSearch={this.props.submitSearch}
+            gotoPage={this.props.gotoPage}
+          />
+        </React.Fragment>
+      )
     }
   }
 
@@ -51,7 +50,7 @@ Main.propTypes = {
   response: PropTypes.object.isRequired,
   currentPage: PropTypes.number.isRequired,
   submitSearch: PropTypes.func.isRequired,
-  gotoPage: PropTypes.func.isRequired
+  gotoPage: PropTypes.func.isRequired,
 }
 
 export default Main

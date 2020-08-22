@@ -5,7 +5,9 @@ class Pagination extends React.Component {
 
   hasPrevious = () => {
     const style = { width: '5em' }
-    if (this.props.currentPage === 1) style.visibility = 'hidden'
+    if (this.props.currentPage === 1) {
+      style.visibility = 'hidden'
+    }
     return (
       <button
         type="button"
@@ -20,7 +22,7 @@ class Pagination extends React.Component {
     const { limit, total } = this.props.response
     const lastPage = Math.ceil(total / limit)
     const style = { width: '5em' }
-    if (this.props.currentPage === lastPage) style.visibility = 'hidden'
+    if (this.props.currentPage === lastPage) { style.visibility = 'hidden' }
     return (
       <button
         type="button"
@@ -31,14 +33,14 @@ class Pagination extends React.Component {
     )
   }
 
-  requestPrevious = e => {
+  requestPrevious = () => {
     const current = this.props.currentPage - 1
     this.setState({ current })
     this.props.gotoPage(current)
     this.forceUpdate()
   }
 
-  requestNext = e => {
+  requestNext = () => {
     const current = this.props.currentPage + 1
     this.setState({ current })
     this.props.gotoPage(current)
@@ -58,7 +60,7 @@ class Pagination extends React.Component {
 Pagination.propTypes = {
   response: PropTypes.object.isRequired,
   currentPage: PropTypes.number.isRequired,
-  gotoPage: PropTypes.func.isRequired
+  gotoPage: PropTypes.func.isRequired,
 }
 
 export default Pagination

@@ -36,7 +36,7 @@ class Record extends React.Component {
 
 Record.propTypes = {
   data: PropTypes.object.isRequired,
-  showDetails: PropTypes.func.isRequired
+  showDetails: PropTypes.func.isRequired,
 }
 
 export default Record

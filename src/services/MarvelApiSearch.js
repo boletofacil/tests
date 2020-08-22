@@ -19,8 +19,9 @@ function MarvelApiSearch() {
         ts: timestamp,
         apikey: env.publicKey(),
         hash: md5(timestamp + env.privateKey() + env.publicKey()),
-        limit, offset
-      }
+        limit,
+        offset,
+      },
     })
   }
 }

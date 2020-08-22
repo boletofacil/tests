@@ -8,13 +8,13 @@ class Content extends React.Component {
 
   state = {
     isShowingDetails: false,
-    detailsFor: null
+    detailsFor: null,
   }
 
   toggleDetails = (record = null) => {
     this.setState({
       isShowingDetails: !!record,
-      detailsFor: record
+      detailsFor: record,
     })
   }
 
@@ -43,15 +43,13 @@ class Content extends React.Component {
       <div className="pb-4">
         {this.hasPages()}
         <div className="row">
-          {this.props.response.results.map(record => {
-            return (
+          {this.props.response.results.map((record) => (
               <Record
                 key={record.id}
                 data={record}
                 showDetails={this.toggleDetails}
               />
-            )
-          })
+          ))
         }
         </div>
         {this.hasPages()}
@@ -65,7 +63,7 @@ Content.propTypes = {
   response: PropTypes.object.isRequired,
   currentPage: PropTypes.number.isRequired,
   submitSearch: PropTypes.func.isRequired,
-  gotoPage: PropTypes.func.isRequired
+  gotoPage: PropTypes.func.isRequired,
 }
 
 export default Content

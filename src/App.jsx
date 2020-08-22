@@ -10,7 +10,7 @@ export default class App extends React.Component {
     isLoaded: false,
     searchResponse: {},
     lastSearch: '',
-    currentPage: 1
+    currentPage: 1,
   }
 
   submitSearch = (search, page = 1) => {
@@ -18,28 +18,28 @@ export default class App extends React.Component {
       loading: true,
       isLoaded: true,
       lastSearch: search,
-      currentPage: page
+      currentPage: page,
     })
     marvel.search(search, page)
-    .then(response => {
-      this.setState({
-        searchResponse: response.data.data
+      .then((response) => {
+        this.setState({
+          searchResponse: response.data.data,
+        })
       })
-    })
-    .catch(err => {
-      console.error(err)
-      this.setState({
-        isLoaded: false
+      .catch((err) => {
+        console.error(err)
+        this.setState({
+          isLoaded: false,
+        })
       })
-    })
-    .finally(() => {
-      this.setState({
-        loading: false
+      .finally(() => {
+        this.setState({
+          loading: false,
+        })
       })
-    })
   }
 
-  gotoPage = page => {
+  gotoPage = (page) => {
     this.submitSearch(this.state.lastSearch, page)
   }
 

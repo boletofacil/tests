@@ -5,7 +5,7 @@ import $ from 'jquery'
 class Details extends React.Component {
 
   componentDidMount() {
-    $('#character-details').on('hidden.bs.modal', event => {
+    $('#character-details').on('hidden.bs.modal', () => {
       this.props.hideDetails.bind(this)
     })
     this.componentDidUpdate()
@@ -17,7 +17,9 @@ class Details extends React.Component {
   }
 
   render() {
-    const { thumbnail, name, description, stories, comics, series, events, urls } = this.props.character
+    const {
+      thumbnail, name, description, stories, comics, series, events, urls,
+    } = this.props.character
     return (
       <div id="character-details" className="modal fade" tabIndex="1" role="dialog">
         <div className="modal-dialog" role="document">
@@ -66,7 +68,7 @@ class Details extends React.Component {
 }
 
 Details.propTypes = {
-  character: PropTypes.object.isRequired
+  character: PropTypes.object.isRequired,
 }
 
 export default Details
