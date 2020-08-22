@@ -11,7 +11,7 @@
     "type": "portfolio"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "serve": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,7 +34,11 @@
     "extends": [
       "react-app",
       "@lacussoft/standard"
-    ]
+    ],
+    "rules": {
+      "class-methods-use-this": "off",
+      "consistent-return": "off"
+    }
   },
   "browserslist": {
     "production": [
