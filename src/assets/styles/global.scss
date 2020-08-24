@@ -1,38 +1,27 @@
-/**
- * Import fonts to the project
- */
+
+/* Import fonts to the project */
 @import url('https://fonts.googleapis.com/css?family=Marvel&display=swap');
 
-/*
- * Define theme color to be incorporated in Bootstrap styles
- */
+/* Define theme color to be incorporated in Bootstrap styles */
 $theme-colors: (
   'marvel': #ed1d24,
 );
 
-/**
- * Import Bootstrap styles framework
- */
-@import 'node_modules/bootstrap/scss/bootstrap';
+/* Import Bootstrap styles framework */
+@import '~bootstrap/scss/bootstrap';
 
-/**
- * Additional custom styles
- */
+/* Additional global custom styles */
 * {
   font-family: 'Marvel', sans-serif;
 }
 
 body {
-  background-image: url('assets/background.jpg');
+  background-image: url('../images/background.jpg');
   background-position: top center;
   background-attachment: fixed;
   background-size: cover;
   background-color: #000;
   width: 100%;
-}
-
-.modal-open {
-  overflow: scroll;
 }
 
 ::-moz-selection {
