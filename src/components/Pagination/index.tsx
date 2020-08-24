@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react'
+import React, { useReducer } from 'react'
 import './styles.scss'
 
 interface PaginationProps {
@@ -7,26 +7,22 @@ interface PaginationProps {
   response: any
 }
 
-const Pagination: React.FC<PaginationProps> = (props) => {
-  const [currentPage, setCurrentPage] = useState(1)
-
+const Pagination: React.FC<PaginationProps> = ({ currentPage, response, goToPage }) => {
   const [, forceUpdate] = useReducer((x: number) => x + 1, 0)
 
   function requestPrevious() {
-    setCurrentPage(props.currentPage - 1)
-    props.goToPage(currentPage)
+    goToPage(currentPage - 1)
     forceUpdate()
   }
 
   function requestNext() {
-    setCurrentPage(props.currentPage + 1)
-    props.goToPage(currentPage)
+    goToPage(currentPage + 1)
     forceUpdate()
   }
 
   function hasPrevious() {
     const style: any = { width: '5em' }
-    if (props.currentPage === 1) {
+    if (currentPage === 1) {
       style.visibility = 'hidden'
     }
     return (
@@ -40,10 +36,10 @@ const Pagination: React.FC<PaginationProps> = (props) => {
   }
 
   function hasNext() {
-    const { limit, total } = props.response
+    const { limit, total } = response
     const lastPage = Math.ceil(total / limit)
     const style: any = { width: '5em' }
-    if (props.currentPage === lastPage) {
+    if (currentPage === lastPage) {
       style.visibility = 'hidden'
     }
     return (
