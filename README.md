@@ -1,29 +1,26 @@
+<h1 align="center">
+  :izakaya_lantern: Marvel Characters Search App
+</h1>
 
-# Marvel Characters - Your wiki for MCU
-
-- **Develepoled by:** [Julio L. Muller](https://juliolmuller.github.io/)
+- **Project developed by:** [Julio L. Muller](https://github.com/juliolmuller)
 - **Released on:** Jul 31, 2019
-- **Updated on:** Sep 4, 2019
-- **Latest version:** 1.0.4
+- **Updated on:** Aug 25, 2020
+- **Latest version:** 1.1.0
 - **License:** MIT
 
-## Overview
+![Marvel Characters snapshot](./src/assets/images/app-overview.jpg)
 
-This is an application developed as a challenge, proposed by the company [Juno](https://www.juno.com.br/). The application consumes Marvel API, performing a search in the characters of the Marvel Universe and displaying their details. The main objective was to develop a fully responsive front-end web application using React library.
+This application was proposed by [Juno](https://www.juno.com.br/), as part of their recruitment process for frontend developers. The challenge was to build a fully responsive client application in React to consume [Marvel API](https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0), searching for characters and being able to display their details when selected.
 
-[Take a look at the app in production!](https://juliolmuller.github.io/marvel-characters)
+[Check out the application running!](https://juliolmuller.github.io/marvel-characters/)
 
-![Marvel Characters](./app-overview.jpg)
+## :pencil: Objectives
 
-## Main Objectives
-
-The aaplication consumes [Marvel API endpoint for characters](https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0) and meets the following mandatory requirements:
-
-- :heavy_check_mark: Display a search input for the user to filter the field `nameStartsWith`;
+- :heavy_check_mark: Display a search input for the user to query API based on  `nameStartsWith`;
 - :heavy_check_mark: Display search result (summarized);
-- :heavy_check_mark: When opening an item, displat its details;
+- :heavy_check_mark: When opening an item, display its details;
 - :heavy_check_mark: Display responsive thumbnails (that better fits the screen) for the items which has it;
-- :heavy_check_mark: Interface MUSTt be responsive;
+- :heavy_check_mark: Interface MUST be responsive;
 - :heavy_check_mark: The final project must contain a `.MD` file with specifications of the project.
 - :heavy_check_mark: Develop the application using React and Node.js (with ES6+)
 
@@ -32,61 +29,38 @@ The aaplication consumes [Marvel API endpoint for characters](https://developer.
 - :heavy_check_mark: Pagination;
 - :warning: SASS (implemented for Bootstrap and additional styles customization);
 - :x: Transitions;
-- :heavy_check_mark: Project watchers and routines with Node.js and other enviromental utilities;
+- :heavy_check_mark: Project watchers and routines with Node.js and other environmental utilities;
 - :x: Unit tests by componnent.
 
-## Setting Up the Enviroment
+## :trophy: Lessons Learned
 
-To reproduce the development enviroment locally you may start downloading the compacted folder of the project or use **Git** to clone the repository (recommended):
+- Communicate with [Marvel API](https://developer.marvel.com/);
+- Build a React.js (first app ever);
+- Overwrite Bootstrap defaults with SASS;
+- React with TypeScript (at version 1.1);
+- React Hooks (at version 1.1);
+
+## :hammer: Technologies & Resources
+
+**Frontend:**
+- [React 16.13](https://reactjs.org)
+- [Bootstrap 4](https://getbootstrap.com/)
+- [jQuery 3](https://jquery.com/)
+- [Axios](https://github.com/axios/axios) (HTTP client)
+
+**Development:**
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Cmder](https://cmder.net/) (terminal emulator)
+- [Node.js](https://nodejs.org/en/) scripts (with Laravel Mix)
+
+## :bell: Setting up the Environment
+
+To execute the application, you must have a Marvel Developer account and have the **public** and **private** keys generated. Once you have them, you will need to rename the file `env.js.example` (in `src/config/`) to simply `env.js`, and input the keys in their appropriate location.
+
+Make sure to have **Node.js 10+** installed in your machine and its **npm** available in the command line, then use the following routines:
 
 ```bash
-git clone https://github.com/juliolmuller/marvel-characters
+$ npm install   # Download dependencies
+$ npm run serve # Run development server
+$ npm run build # Build files for production
 ```
-
-Afterwards, you will also need **Node.js** to download the packages dependencies and run the development routines:
-
-```bash
-npm install
-```
-
-You may find this 2 tools in their respective web sites:
-
-- **Git:** (https://php.net/)
-- **Node.js:** (https://nodejs.org/)
-
-Additionally, you also must sign up to the [Marvel Development Portal](https://developer.marvel.com/) to generate your application keys, so your web application can consume their application programming interface (API).
-
-Once you generate your keys, you will need to inport them into the project. For that, rename the file `env.js.example' (inside directory `src/config`) to 'env.js`, and paste **PUBLIC** and **PRIVATE** hashes in the respective places.
-
-You should be ready for coding now!
-
-Run `npm start` and you are good to go!.
-
-## Technologies
-
-Here are the main technologies used to build this project:
-
-- Styles: [Bootstrap 4](https://getbootstrap.com/)
-- JavaScript Library: [React 16](https://reactjs.org)
-- HTTP Client: [Axios](https://github.com/axios/axios)
-- Text Editor: [Visual Studio Code](https://code.visualstudio.com/)
-- Console Emulator: [Cmder](https://cmder.net/)
-- JS Package Manager: [Node.js](https://nodejs.org/en/)
-- Versioning Tool: [Git](https://git-scm.com/)
-- Remote Repository: [GitHub](https://github.com/)
-
-## Release Notes
-
-<!-- - **1.1**
-  - Changed API search param from `nameStartsWith` to `name`;
-  - Added page footer;
-  - Added link to project repository. -->
-- **1.0**
-  - Stable release of the application.
-
-## Know Issues
-
-- ~~Background image misdisplaied in browsers of mobile devices~~ (addressed in version 1.0.1)
-- ~~Title _CHARACTERS_ spliting in multiple rows~~ (addressed in version 1.0.1)
-- ~~Laggy behavior due to scroll bar hiding when opening the Bootstrap modal~~ (addressed in version 1.0.2)
-- ~~Modal close button wrongly placed~~ (addressed in version 1.0.2)

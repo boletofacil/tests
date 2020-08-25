@@ -1,29 +1,57 @@
 {
   "name": "marvel-characters",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "homepage": "https://juliolmuller.github.io/marvel-characters/",
-  "private": true,
-  "dependencies": {
-    "axios": "0.19.*",
-    "bootstrap": "4.*",
-    "jquery": "3.*",
-    "md5": "2.*",
-    "popper.js": "1.*",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "^3.1.1"
+  "author": {
+    "name": "Julio L. M",
+    "url": "https://github.com/juliolmuller"
   },
-  "devDependencies": {
-    "node-sass": "4.*"
+  "repository": {
+    "url": "https://github.com/juliolmuller/marvel-characters",
+    "type": "portfolio"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "serve": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "dependencies": {
+    "axios": "~0.20.0",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "md5": "^2.3.0",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@lacussoft/eslint-config-standard": "^1.0.7",
+    "@types/jquery": "^3.5.1",
+    "@types/md5": "^2.2.0",
+    "@types/node": "^14.6.0",
+    "@types/react": "^16.9.46",
+    "@types/react-dom": "^16.9.8",
+    "node-sass": "^4.14.1",
+    "react-scripts": "^3.4.3",
+    "typescript": "^4.0.2"
+  },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "@lacussoft/standard"
+    ],
+    "rules": {
+      "class-methods-use-this": "off",
+      "consistent-return": "off",
+      "lines-between-class-members": [
+        "error",
+        "always",
+        {
+          "exceptAfterSingleLine": true
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [

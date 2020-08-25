@@ -1,0 +1,36 @@
+
+/* Import fonts to the project */
+@import url('https://fonts.googleapis.com/css?family=Marvel&display=swap');
+
+/* Define theme color to be incorporated in Bootstrap styles */
+$theme-colors: (
+  'marvel': #ed1d24,
+);
+
+/* Import Bootstrap styles framework */
+@import '~bootstrap/scss/bootstrap';
+
+/* Additional global custom styles */
+* {
+  font-family: 'Marvel', sans-serif;
+}
+
+body {
+  background-image: url('../images/background.jpg');
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000;
+  width: 100%;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: #ed1d24;
+}
+
+::selection {
+  color: #fff;
+  background: #ed1d24;
+}

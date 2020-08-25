@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/marvel-characters/precache-manifest.21fa87ca90c867d73582671a843b6b01.js"
+  "/marvel-characters/precache-manifest.58fa3d5e1f77da196b33a780778ee318.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -34,6 +34,6 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/marvel-characters/index.html"), {
-  
-  blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
+
+  blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });
