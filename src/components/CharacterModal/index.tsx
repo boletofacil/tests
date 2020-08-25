@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import $ from 'jquery'
+import './styles.scss'
 
-interface DetailsProps {
+interface CharacterModalProps {
   hideDetails: (record?: any) => any
   character: any
 }
 
-const Details: React.FC<DetailsProps> = ({ character, hideDetails }) => {
+const CharacterModal: React.FC<CharacterModalProps> = ({ character, hideDetails }) => {
   useEffect(() => {
     $('#character-details').modal('show')
   }, [])
@@ -61,4 +62,4 @@ const Details: React.FC<DetailsProps> = ({ character, hideDetails }) => {
   )
 }
 
-export default Details
+export default CharacterModal

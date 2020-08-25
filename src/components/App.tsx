@@ -1,48 +1,58 @@
 import React, { useState } from 'react'
 import Header from './Header'
-import Main from './Main'
+import SearchBox from './SearchBox'
+import CharactersList from './CharactersList'
 import marvel from '../services/marvelApi'
+import loadingSpinner from '../assets/images/loading.gif'
 
 const App = () => {
+  const [metadata, setMetadata] = useState({})
+  const [characters, setCharacters] = useState([])
   const [loading, setLoading] = useState(false)
-  const [isLoaded, setIsLoaded] = useState(false)
   const [lastSearch, setLastSearch] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
-  const [searchResponse, setSearchResponse] = useState({})
 
   async function submitSearch(search: string, page: number = 1) {
     setLoading(true)
-    setIsLoaded(true)
-    setLastSearch(search)
     setCurrentPage(page)
+    setLastSearch(search)
 
     try {
-      const { data: { data } } = await marvel.search(search, page)
-      setSearchResponse(data)
-    } catch (err) {
-      console.error(err)
-      setIsLoaded(false)
+      const { data } = await marvel.search(search, page)
+      const { results, ...responseMetadata } = data.data
+      setMetadata(responseMetadata)
+      setCharacters(results)
+    } catch (ex) {
+      console.error(ex)
     } finally {
       setLoading(false)
     }
   }
 
-  function goToPage(page: number) {
-    submitSearch(lastSearch, page)
-  }
-
   return (
-    <div>
+    <>
       <Header />
-      <Main
-        loading={loading}
-        isLoaded={isLoaded}
-        response={searchResponse}
-        currentPage={currentPage}
-        submitSearch={submitSearch}
-        goToPage={goToPage}
-      />
-    </div>
+      <div className="container-fluid py-5">
+        <div className="container bg-white">
+          <SearchBox submitSearch={submitSearch} />
+          <div className={(loading || characters.length) ? 'd-block' : 'd-none'}>
+            <hr />
+            {loading ? (
+              <div className="text-center py-5">
+                <img src={loadingSpinner} alt="Loading animation" />
+              </div>
+            ) : (
+              <CharactersList
+                metadata={metadata}
+                characters={characters}
+                currentPage={currentPage}
+                goToPage={(page: number) => submitSearch(lastSearch, page)}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
 

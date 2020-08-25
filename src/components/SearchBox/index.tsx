@@ -5,16 +5,16 @@ interface SearchBoxProps {
   submitSearch: (search: string) => any
 }
 
-const SearchBox: React.FC<SearchBoxProps> = (props) => {
+const SearchBox: React.FC<SearchBoxProps> = ({ submitSearch }) => {
   const [search, setSearch] = useState('')
 
-  function onSubmit(ev: FormEvent) {
+  function handleSubmit(ev: FormEvent) {
     ev.preventDefault()
-    props.submitSearch(search)
+    submitSearch(search)
   }
 
   return (
-    <form role="search" className="px-2 pt-4 pb-2" onSubmit={onSubmit}>
+    <form className="px-2 pt-4 pb-2" onSubmit={handleSubmit} role="search">
       <div id="search-box" className="form-group">
         <label htmlFor="search-box" className="h5">
           Start typing the name of your character:
@@ -29,9 +29,12 @@ const SearchBox: React.FC<SearchBoxProps> = (props) => {
             onChange={(ev) => setSearch(ev.target.value)}
             autoFocus
           />
-          <button type="submit" className="btn btn-marvel col-2 col-lg-1 rounded-0">
-            GO
-          </button>
+          <input
+            type="submit"
+            className="btn btn-marvel col-2 col-lg-1 rounded-0"
+            disabled={!search}
+            value="GO"
+          />
         </div>
       </div>
     </form>
