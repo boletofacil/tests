@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import './styles.scss'
 
 interface CharacterCardProps {
@@ -6,7 +6,7 @@ interface CharacterCardProps {
   character: any
 }
 
-const CharacterCard: React.FC<CharacterCardProps> = ({ character, showDetails }) => (
+const CharacterCard: FC<CharacterCardProps> = ({ character, showDetails }) => (
   <div className="col-12 col-md-6">
     <div className="card mb-3 border-marvel character-card">
       <div className="card-body">

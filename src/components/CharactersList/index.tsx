@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import CharacterCard from '../CharacterCard'
 import CharacterModal from '../CharacterModal'
 import Pagination from '../Pagination'
@@ -14,7 +14,7 @@ interface CharactersListProps {
   }
 }
 
-const CharactersList: React.FC<CharactersListProps> = ({
+const CharactersList: FC<CharactersListProps> = ({
   goToPage, currentPage, characters, metadata: { total = 1, limit = 1 },
 }) => {
   const [displayDetails, setDisplayDetails] = useState(null)

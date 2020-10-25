@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { FC, useEffect } from 'react'
 import $ from 'jquery'
 import './styles.scss'
 
@@ -7,7 +7,7 @@ interface CharacterModalProps {
   character: any
 }
 
-const CharacterModal: React.FC<CharacterModalProps> = ({ character, hideDetails }) => {
+const CharacterModal: FC<CharacterModalProps> = ({ character, hideDetails }) => {
   useEffect(() => {
     $('#character-details').modal('show')
   }, [])

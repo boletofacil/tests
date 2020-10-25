@@ -1,16 +1,16 @@
-import React, { useState, FormEvent } from 'react'
+import React, { FC, FormEvent, useState } from 'react'
 import './styles.scss'
 
 interface SearchBoxProps {
   submitSearch: (search: string) => any
 }
 
-const SearchBox: React.FC<SearchBoxProps> = ({ submitSearch }) => {
+const SearchBox: FC<SearchBoxProps> = (props) => {
   const [search, setSearch] = useState('')
 
-  function handleSubmit(ev: FormEvent) {
+  const handleSubmit = (ev: FormEvent) => {
     ev.preventDefault()
-    submitSearch(search)
+    props.submitSearch(search)
   }
 
   return (

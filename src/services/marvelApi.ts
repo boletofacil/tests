@@ -4,6 +4,7 @@ import env from '../config/env'
 
 class MarvelApi {
   private limit: number
+
   private http: AxiosInstance
 
   constructor() {
@@ -24,7 +25,7 @@ class MarvelApi {
     })
   }
 
-  public search(search: string, page: number = 1) {
+  public search(search: string, page = 1) {
     const offset = (page * this.limit) - this.limit
 
     return this.http.get('characters', {
