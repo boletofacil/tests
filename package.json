@@ -6,6 +6,7 @@
     "name": "Julio L. M",
     "url": "https://juliolmuller.github.io/"
   },
+  "homepage": "https://juliolmuller.github.io/marvel-characters/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
