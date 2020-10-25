@@ -2,11 +2,24 @@
   :izakaya_lantern: Marvel Characters Search App
 </h1>
 
-- **Project developed by:** [Julio L. Muller](https://github.com/juliolmuller)
-- **Released on:** Jul 31, 2019
-- **Updated on:** Aug 25, 2020
-- **Latest version:** 1.1.0
-- **License:** MIT
+<p align="center">
+  <a href="#pencil-objectives">Objectives</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#trophy-lessons-learned">Lessons Learned</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-technologies--resources">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#hammer-setting-up-the-environment">Environment Setup</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/static/v1?labelColor=000000&color=ed1d24&label=created%20at&message=Jul%202019" alt="Creation Date" />
+
+  <img src="https://img.shields.io/github/last-commit/juliolmuller/marvel-characters?label=updated%20at&labelColor=000000&color=ed1d24" alt="Update Date" />
+
+  <img src="https://img.shields.io/github/v/tag/juliolmuller/marvel-characters?label=latest%20version&labelColor=000000&color=ed1d24" alt="Latest Version" />
+
+  <img src="https://img.shields.io/static/v1?labelColor=000000&color=ed1d24&label=PRs&message=welcome" alt="Pull Requests Welcome" />
+
+  <img src="https://img.shields.io/github/license/juliolmuller/marvel-characters?labelColor=000000&color=ed1d24" alt="Project License" />
+</p>
 
 ![Marvel Characters snapshot](./src/assets/images/app-overview.jpg)
 
@@ -16,21 +29,21 @@ This application was proposed by [Juno](https://www.juno.com.br/), as part of th
 
 ## :pencil: Objectives
 
-- :heavy_check_mark: Display a search input for the user to query API based on  `nameStartsWith`;
-- :heavy_check_mark: Display search result (summarized);
-- :heavy_check_mark: When opening an item, display its details;
-- :heavy_check_mark: Display responsive thumbnails (that better fits the screen) for the items which has it;
-- :heavy_check_mark: Interface MUST be responsive;
-- :heavy_check_mark: The final project must contain a `.MD` file with specifications of the project.
-- :heavy_check_mark: Develop the application using React and Node.js (with ES6+)
+- [x] Display a search input for the user to query API based on  `nameStartsWith`;
+- [x] Display search result (summarized);
+- [x] When opening an item, display its details;
+- [x] Display responsive thumbnails (that better fits the screen) for the items which has it;
+- [x] Interface MUST be responsive;
+- [x] The final project must contain a `.MD` file with specifications of the project.
+- [x] Develop the application using React and Node.js (with ES6+)
 
 ### Optional bonus
 
-- :heavy_check_mark: Pagination;
-- :warning: SASS (implemented for Bootstrap and additional styles customization);
-- :x: Transitions;
-- :heavy_check_mark: Project watchers and routines with Node.js and other environmental utilities;
-- :x: Unit tests by componnent.
+- [x] Pagination;
+- [x] SASS (implemented for Bootstrap and additional styles customization);
+- [ ] Transitions;
+- [x] Project watchers and routines with Node.js and other environmental utilities;
+- [ ] Unit tests by componnent.
 
 ## :trophy: Lessons Learned
 
@@ -40,10 +53,10 @@ This application was proposed by [Juno](https://www.juno.com.br/), as part of th
 - React with TypeScript (at version 1.1);
 - React Hooks (at version 1.1);
 
-## :hammer: Technologies & Resources
+## :rocket: Technologies & Resources
 
 **Frontend:**
-- [React 16.13](https://reactjs.org)
+- [React ~~16.9~~17](https://reactjs.org)
 - [Bootstrap 4](https://getbootstrap.com/)
 - [jQuery 3](https://jquery.com/)
 - [Axios](https://github.com/axios/axios) (HTTP client)
@@ -53,14 +66,14 @@ This application was proposed by [Juno](https://www.juno.com.br/), as part of th
 - [Cmder](https://cmder.net/) (terminal emulator)
 - [Node.js](https://nodejs.org/en/) scripts (with Laravel Mix)
 
-## :bell: Setting up the Environment
+## :hammer: Setting up the Environment
 
-To execute the application, you must have a Marvel Developer account and have the **public** and **private** keys generated. Once you have them, you will need to rename the file `env.js.example` (in `src/config/`) to simply `env.js`, and input the keys in their appropriate location.
+To execute the application, you must have a Marvel Developer account and have the **public** and **private** keys generated. Once you have them, you will have to register both as environmental variables in `.env` file, at project root (I suggest to create a copy called `.env.local` to keep it out from Git repository).
 
 Make sure to have **Node.js 10+** installed in your machine and its **npm** available in the command line, then use the following routines:
 
 ```bash
 $ npm install   # Download dependencies
-$ npm run serve # Run development server
+$ npm start     # Run development server
 $ npm run build # Build files for production
 ```
