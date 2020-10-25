@@ -1,6 +1,5 @@
 import axios, { AxiosInstance } from 'axios'
 import md5 from 'md5'
-import env from '../config/env'
 
 class MarvelApi {
   private limit: number
@@ -9,13 +8,13 @@ class MarvelApi {
 
   constructor() {
     const timestamp = Number(new Date())
-    const publicKey = env.publicKey()
-    const privateKey = env.privateKey()
+    const publicKey = process.env.REACT_APP_API_PUBLIC_KEY as string
+    const privateKey = process.env.REACT_APP_API_PRIVATE_KEY as string
     const hashKey = md5(timestamp + privateKey + publicKey)
 
     this.limit = 20
     this.http = axios.create({
-      baseURL: 'https://gateway.marvel.com/v1/public/',
+      baseURL: process.env.REACT_APP_API_URL,
       params: {
         limit: this.limit,
         apikey: publicKey,
