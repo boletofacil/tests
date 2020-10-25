@@ -1,57 +1,43 @@
 {
   "name": "marvel-characters",
-  "version": "1.1.0",
-  "homepage": "https://juliolmuller.github.io/marvel-characters/",
+  "version": "1.1.1",
+  "license": "MIT",
   "author": {
     "name": "Julio L. M",
-    "url": "https://github.com/juliolmuller"
-  },
-  "repository": {
-    "url": "https://github.com/juliolmuller/marvel-characters",
-    "type": "portfolio"
+    "url": "https://juliolmuller.github.io/"
   },
   "scripts": {
-    "serve": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "axios": "~0.20.0",
-    "bootstrap": "^4.5.2",
+    "axios": "~0.21.0",
+    "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
     "md5": "^2.3.0",
     "popper.js": "^1.16.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@lacussoft/eslint-config-standard": "^1.0.7",
-    "@types/jquery": "^3.5.1",
-    "@types/md5": "^2.2.0",
-    "@types/node": "^14.6.0",
-    "@types/react": "^16.9.46",
+    "@lacussoft/eslint-config-standard": "^1.0.9",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/jquery": "^3.5.3",
+    "@types/md5": "^2.2.1",
+    "@types/node": "^14.14.2",
+    "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "eslint-plugin-jest": "^24.1.0",
     "node-sass": "^4.14.1",
-    "react-scripts": "^3.4.3",
-    "typescript": "^4.0.2"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "@lacussoft/standard"
-    ],
-    "rules": {
-      "class-methods-use-this": "off",
-      "consistent-return": "off",
-      "lines-between-class-members": [
-        "error",
-        "always",
-        {
-          "exceptAfterSingleLine": true
-        }
-      ]
-    }
+    "react-scripts": "^3.4.4",
+    "typescript": "^4.0.3"
   },
   "browserslist": {
     "production": [
