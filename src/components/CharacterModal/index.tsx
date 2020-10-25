@@ -10,6 +10,10 @@ interface CharacterModalProps {
 const CharacterModal: FC<CharacterModalProps> = ({ character, hideDetails }) => {
   useEffect(() => {
     $('#character-details').modal('show')
+    $(document.body).css({
+      overflow: 'auto',
+      paddingRight: 0,
+    })
   }, [])
 
   useEffect(() => {
