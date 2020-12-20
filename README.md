@@ -73,7 +73,7 @@ To execute the application, you must have a Marvel Developer account and have th
 Make sure to have **Node.js 10+** installed in your machine and its **npm** available in the command line, then use the following routines:
 
 ```bash
-$ npm install   # Download dependencies
-$ npm start     # Run development server
-$ npm run build # Build files for production
+$ npm install     # Download dependencies
+$ npm start       # Run development server
+$ npm run build   # Build files for production
 ```
