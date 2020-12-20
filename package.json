@@ -1,15 +1,13 @@
 {
   "name": "marvel-characters",
   "version": "1.1.2",
+  "private": true,
   "license": "MIT",
-  "author": {
-    "name": "Julio L. M",
-    "url": "https://juliolmuller.github.io/"
-  },
-  "homepage": "https://juliolmuller.github.io/marvel-characters/",
+  "author": "Julio L. Muller",
+  "homepage": "https://juliolmuller.github.io/marvel-characters",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf docs/ && react-scripts build && mv build/ docs/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -23,22 +21,22 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@lacussoft/eslint-config-standard": "^1.0.9",
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/jquery": "^3.5.3",
+    "@lacussoft/eslint-config": "^1.0.1",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.0",
+    "@types/jest": "^26.0.19",
+    "@types/jquery": "^3.5.5",
     "@types/md5": "^2.2.1",
-    "@types/node": "^14.14.2",
-    "@types/react": "^16.9.53",
-    "@types/react-dom": "^16.9.8",
-    "@typescript-eslint/eslint-plugin": "^4.5.0",
-    "@typescript-eslint/parser": "^4.5.0",
-    "eslint-plugin-jest": "^24.1.0",
+    "@types/node": "^14.14.14",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint-plugin-jest": "^24.1.3",
     "node-sass": "^4.14.1",
-    "react-scripts": "^3.4.4",
-    "typescript": "^4.0.3"
+    "react-scripts": "^4.0.1",
+    "typescript": "^4.1.3"
   },
   "browserslist": {
     "production": [
