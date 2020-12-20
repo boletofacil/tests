@@ -2,9 +2,9 @@ module.exports = {
   root: true,
   extends: [
     'react-app',
-    '@lacussoft/standard',
-    'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
+    '@lacussoft',
+    'plugin:@typescript-eslint/recommended',
   ],
   plugins: [
     'react',

@@ -3,7 +3,6 @@ import md5 from 'md5'
 
 class MarvelApi {
   private limit: number
-
   private http: AxiosInstance
 
   constructor() {
