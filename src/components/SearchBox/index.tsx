@@ -1,4 +1,4 @@
-import React, { FC, FormEvent, useState } from 'react'
+import { FC, FormEvent, useState } from 'react'
 import './styles.scss'
 
 interface SearchBoxProps {

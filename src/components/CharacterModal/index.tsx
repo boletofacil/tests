@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import $ from 'jquery'
 import './styles.scss'
 
@@ -41,10 +41,13 @@ const CharacterModal: FC<CharacterModalProps> = ({ character, hideDetails }) => 
               {character.name}
             </h1>
           </div>
+
           <div className="modal-body text-center">
-            <p className="h5">{character.description || (
-              <span className="font-italic">No description</span>
-            )}</p>
+            <p className="h5">
+              {character.description || (
+                <span className="font-italic">No description</span>
+              )}
+            </p>
             <div className="d-flex justify-content-around pt-3">
               <h5><span className="badge badge-primary">{character.stories.available} stories</span></h5>
               <h5><span className="badge badge-danger">{character.comics.available} comics</span></h5>
@@ -52,6 +55,7 @@ const CharacterModal: FC<CharacterModalProps> = ({ character, hideDetails }) => 
               <h5><span className="badge badge-warning">{character.events.available} events</span></h5>
             </div>
           </div>
+
           <div className="modal-footer d-flex justify-content-between">
             <button type="button" className="btn btn-light rounded-0" data-dismiss="modal">
               Close

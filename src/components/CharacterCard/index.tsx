@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import './styles.scss'
 
 interface CharacterCardProps {
@@ -15,6 +15,7 @@ const CharacterCard: FC<CharacterCardProps> = ({ character, showDetails }) => (
           className="figure-fluid float-left"
           alt="Character thumbnail"
         />
+
         <div className="character-card-details">
           <h3 className="card-title text-truncate h5" title={character.name}>
             {character.name}

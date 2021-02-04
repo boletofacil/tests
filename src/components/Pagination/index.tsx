@@ -1,4 +1,4 @@
-import React, { FC, useReducer } from 'react'
+import { FC, useReducer } from 'react'
 import './styles.scss'
 
 interface PaginationProps {
@@ -32,9 +32,11 @@ const Pagination: FC<PaginationProps> = (props) => {
         onClick={goToPrevious}
         style={{ visibility: (props.current === 1) ? 'hidden' : 'visible' }}
       >Previous</button>
-      {props.displayCounter && (
+
+      <If condition={!!props.displayCounter}>
         <span>Page {props.current} of {last}</span>
-      )}
+      </If>
+
       <button
         type="button"
         className="btn btn-outline-marvel page-nav-btn"

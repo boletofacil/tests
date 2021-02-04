@@ -6,9 +6,9 @@
   "author": "Julio L. Muller",
   "homepage": "https://juliolmuller.github.io/marvel-characters",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "rm -rf docs/ && react-scripts build && mv build/ docs/",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "rm -rf docs/ && react-app-rewired build && mv build/ docs/",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
@@ -33,8 +33,12 @@
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
+    "babel-plugin-jsx-control-statements": "^4.1.0",
+    "customize-cra": "^1.0.0",
     "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-jsx-control-statements": "^2.2.1",
     "node-sass": "^4.14.1",
+    "react-app-rewired": "^2.1.8",
     "react-scripts": "^4.0.2",
     "typescript": "^4.1.3"
   },

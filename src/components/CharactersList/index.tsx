@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import { FC, useState } from 'react'
 import CharacterCard from '../CharacterCard'
 import CharacterModal from '../CharacterModal'
 import Pagination from '../Pagination'
@@ -21,14 +21,15 @@ const CharactersList: FC<CharactersListProps> = ({
 
   return (
     <div className="pb-4">
-      {(total > limit) && (
+      <If condition={total > limit}>
         <Pagination
           goToPage={goToPage}
           current={currentPage}
           total={total}
           limit={limit}
         />
-      )}
+      </If>
+
       <div className="row">
         {characters.map((character: any) => (
           <CharacterCard
@@ -38,7 +39,8 @@ const CharactersList: FC<CharactersListProps> = ({
           />
         ))}
       </div>
-      {(total > limit) && (
+
+      <If condition={total > limit}>
         <Pagination
           goToPage={goToPage}
           current={currentPage}
@@ -46,13 +48,14 @@ const CharactersList: FC<CharactersListProps> = ({
           limit={limit}
           displayCounter
         />
-      )}
-      {displayDetails && (
+      </If>
+
+      <If condition={!!displayDetails}>
         <CharacterModal
           character={displayDetails}
           hideDetails={setDisplayDetails}
         />
-      )}
+      </If>
     </div>
   )
 }
