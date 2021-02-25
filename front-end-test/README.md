@@ -36,4 +36,4 @@ Elaborar um projeto front-end para consultar a API da Marvel (https://developer.
     
 -   Linguagem a ser utilizada: Node + React, utilizando JS com ES6.
     
--   Ao final, compartilhar o projeto com o usuário @boletofacil
+
