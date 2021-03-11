@@ -6,6 +6,7 @@
   "author": "Julio L. Muller",
   "homepage": "https://juliolmuller.github.io/marvel-characters",
   "scripts": {
+    "postinstall": "node -e \"require('fs').existsSync('.env') || require('fs').copyFileSync('.env.example', '.env')\"",
     "start": "react-app-rewired start",
     "build": "rm -rf docs/ && react-app-rewired build && mv build/ docs/",
     "test": "react-app-rewired test",

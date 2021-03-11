@@ -68,12 +68,17 @@ This application was proposed by [Juno](https://www.juno.com.br/), as part of th
 
 ## :hammer: Setting up the Environment
 
-To execute the application, you must have a Marvel Developer account and have the **public** and **private** keys generated. Once you have them, you will have to register both as environment variables in a `.env` file, at project root (use `.env.example` as reference to know all the required variables to be set).
-
-Make sure to have **Node.js 10+** installed in your machine and its **npm** available in the command line, then use the following routines:
+Make sure to have **Node.js 10+** installed in your machine and its **npm** available in the command line, then use the following command to install dependencies:
 
 ```bash
-$ npm install     # Download dependencies
+$ npm install
+```
+
+To execute the application, you must have a Marvel Developer account and have the **public** and **private** keys generated. Once you have them, you will have to register both as environment variables in a `.env` file, at project root. If it wasn't created after installation process, use `.env.example` as reference to know all the required variables to be set.
+
+At last, you can use the following commands to run the application:
+
+```bash
 $ npm start       # Run development server
 $ npm run build   # Build files for production
 ```
