@@ -21,7 +21,7 @@
   <img src="https://img.shields.io/github/license/juliolmuller/marvel-characters?labelColor=000000&color=ed1d24" alt="Project License" />
 </p>
 
-![Marvel Characters snapshot](./src/assets/images/app-overview.jpg)
+![Marvel Characters snapshot](./.github/app-overview.jpg)
 
 This application was proposed by [Juno](https://www.juno.com.br/), as part of their recruitment process for frontend developers. The challenge was to build a fully responsive client application in React to consume [Marvel API](https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0), searching for characters and being able to display their details when selected.
 
