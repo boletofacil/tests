@@ -25,7 +25,7 @@
 
 This application was proposed by [Juno](https://www.juno.com.br/), as part of their recruitment process for frontend developers. The challenge was to build a fully responsive client application in React to consume [Marvel API](https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0), searching for characters and being able to display their details when selected.
 
-[Check out the application running!](https://juliolmuller.github.io/marvel-characters/)
+[Check out the application running!](https://the-marvel-characters.vercel.app/)
 
 ## :pencil: Objectives
 
@@ -79,6 +79,6 @@ To execute the application, you must have a Marvel Developer account and have th
 At last, you can use the following commands to run the application:
 
 ```bash
-$ npm start       # Run development server
+$ npm run serve   # Run development server
 $ npm run build   # Build files for production
 ```
