@@ -1,11 +1,11 @@
-import { FC, useState } from 'react'
+import { useState } from 'react'
 import Header from './Header'
 import SearchBox from './SearchBox'
 import CharactersList from './CharactersList'
 import marvel from '../services/marvelApi'
 import loadingSpinner from '../assets/images/loading.gif'
 
-const App: FC = () => {
+function App() {
   const [metadata, setMetadata] = useState({})
   const [characters, setCharacters] = useState([])
   const [loading, setLoading] = useState(false)
@@ -23,7 +23,7 @@ const App: FC = () => {
       setMetadata(responseMetadata)
       setCharacters(results)
     } catch (ex) {
-      console.error(ex)
+      console.error(ex) // eslint-disable-line no-console
     } finally {
       setLoading(false)
     }
@@ -38,20 +38,19 @@ const App: FC = () => {
 
           <div className={(loading || characters.length) ? 'd-block' : 'd-none'}>
             <hr />
-            <If condition={loading}>
+
+            {loading ? (
               <div className="text-center py-5">
                 <img src={loadingSpinner} alt="Loading animation" />
               </div>
-            </If>
-
-            <If condition={!loading}>
+            ) : (
               <CharactersList
                 metadata={metadata}
                 characters={characters}
                 currentPage={currentPage}
                 goToPage={(page: number) => submitSearch(lastSearch, page)}
               />
-            </If>
+            )}
           </div>
         </div>
       </div>

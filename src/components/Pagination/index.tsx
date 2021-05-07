@@ -1,4 +1,4 @@
-import { FC, useReducer } from 'react'
+import { useReducer } from 'react'
 import './styles.scss'
 
 interface PaginationProps {
@@ -9,18 +9,18 @@ interface PaginationProps {
   limit: number
 }
 
-const Pagination: FC<PaginationProps> = (props) => {
-  const last = Math.ceil(props.total / props.limit)
-
+function Pagination({ goToPage, displayCounter, current, total, limit }: PaginationProps) {
   const [, forceUpdate] = useReducer((x: number) => x + 1, 0)
 
-  const goToPrevious = () => {
-    props.goToPage(props.current - 1)
+  const last = Math.ceil(total / limit)
+
+  function goToPrevious() {
+    goToPage(current - 1)
     forceUpdate()
   }
 
-  const goToNext = () => {
-    props.goToPage(props.current + 1)
+  function goToNext() {
+    goToPage(current + 1)
     forceUpdate()
   }
 
@@ -30,18 +30,18 @@ const Pagination: FC<PaginationProps> = (props) => {
         type="button"
         className="btn btn-outline-marvel page-nav-btn"
         onClick={goToPrevious}
-        style={{ visibility: (props.current === 1) ? 'hidden' : 'visible' }}
+        style={{ visibility: (current === 1) ? 'hidden' : 'visible' }}
       >Previous</button>
 
-      <If condition={!!props.displayCounter}>
-        <span>Page {props.current} of {last}</span>
-      </If>
+      {!displayCounter || (
+        <span>Page {current} of {last}</span>
+      )}
 
       <button
         type="button"
         className="btn btn-outline-marvel page-nav-btn"
         onClick={goToNext}
-        style={{ visibility: (props.current === last) ? 'hidden' : 'visible' }}
+        style={{ visibility: (current === last) ? 'hidden' : 'visible' }}
       >Next</button>
     </div>
   )

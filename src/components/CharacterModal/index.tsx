@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react'
+import { useEffect } from 'react'
 import $ from 'jquery'
 import './styles.scss'
 
@@ -7,7 +7,7 @@ interface CharacterModalProps {
   character: any
 }
 
-const CharacterModal: FC<CharacterModalProps> = ({ character, hideDetails }) => {
+function CharacterModal({ character, hideDetails }: CharacterModalProps) {
   useEffect(() => {
     $('#character-details').modal('show')
     $(document.body).css({
@@ -23,7 +23,12 @@ const CharacterModal: FC<CharacterModalProps> = ({ character, hideDetails }) => 
   }, [hideDetails])
 
   return (
-    <div id="character-details" className="modal fade" tabIndex={1} role="dialog">
+    <div
+      id="character-details"
+      className="modal fade"
+      role="dialog"
+      tabIndex={1}
+    >
       <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header d-flex flex-column align-items-center">
