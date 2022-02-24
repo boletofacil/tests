@@ -9,7 +9,7 @@
     "postinstall": "node -e \"require('fs').existsSync('.env') || require('fs').copyFileSync('.env.example', '.env')\"",
     "prepare": "husky install",
     "commit": "git-cz",
-    "serve": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint src/ --fix",
     "eject": "react-scripts eject"

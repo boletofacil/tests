@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?labelColor=000000&color=ed1d24&label=created%20at&message=Jul%202019" alt="Creation Date" />
+  <img src="https://img.shields.io/static/v1?labelColor=000000&color=ed1d24&label=created%20at&message=july%202019" alt="Creation Date" />
 
   <img src="https://img.shields.io/github/last-commit/juliolmuller/marvel-characters?label=updated%20at&labelColor=000000&color=ed1d24" alt="Update Date" />
 
@@ -68,10 +68,10 @@ This application was proposed by [Juno](https://www.juno.com.br/), as part of th
 
 ## :hammer: Setting up the Environment
 
-Make sure to have **Node.js 10+** installed in your machine and its **npm** available in the command line, then use the following command to install dependencies:
+Make sure to have **Node.js 14+** installed in your machine and **yarn** (**npm** will do the job as well) available in the command line, then use the following command to install dependencies:
 
 ```bash
-$ npm install
+$ yarn   # or "npm install"
 ```
 
 To execute the application, you must have a Marvel Developer account and have the **public** and **private** keys generated. Once you have them, you will have to register both as environment variables in a `.env` file, at project root. If it wasn't created after installation process, use `.env.example` as reference to know all the required variables to be set.
@@ -79,6 +79,6 @@ To execute the application, you must have a Marvel Developer account and have th
 At last, you can use the following commands to run the application:
 
 ```bash
-$ npm run serve   # Run development server
-$ npm run build   # Build files for production
+$ yarn dev     # run development server
+$ yarn build   # build files for production
 ```
