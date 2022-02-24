@@ -1,9 +1,10 @@
 import { useState } from 'react'
+
+import loadingSpinner from '../assets/images/loading.gif'
+import marvel from '../services/marvelApi'
+import CharactersList from './CharactersList'
 import Header from './Header'
 import SearchBox from './SearchBox'
-import CharactersList from './CharactersList'
-import marvel from '../services/marvelApi'
-import loadingSpinner from '../assets/images/loading.gif'
 
 function App() {
   const [metadata, setMetadata] = useState({})

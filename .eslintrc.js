@@ -10,7 +10,8 @@ module.exports = {
   ignorePatterns: [
     'build/',
     'dist/',
-    '!.babelrc*',
+    '!.babelrc.js',
+    '!commitlint.config.js',
   ],
   plugins: [
     'jest',

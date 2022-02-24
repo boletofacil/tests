@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import $ from 'jquery'
+import { useEffect } from 'react'
 import './styles.scss'
 
 interface CharacterModalProps {

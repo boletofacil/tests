@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import CharacterCard from '../CharacterCard'
 import CharacterModal from '../CharacterModal'
 import Pagination from '../Pagination'
