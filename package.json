@@ -12,7 +12,6 @@
     "serve": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint src/ --fix",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
