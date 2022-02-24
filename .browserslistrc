@@ -1,0 +1,10 @@
+[development]
+last 2 chrome versions
+last 2 firefox versions
+last 2 safari versions
+
+[production]
+>1%
+not dead
+not ie 11
+not op_mini all
