@@ -1,9 +1,18 @@
-import axios, { AxiosInstance } from 'axios'
 import md5 from 'md5'
 
 class MarvelApi {
+  private baseURL: string
   private limit: number
-  private http: AxiosInstance
+  private params: Record<string, string | number>
+
+  private getURI(uri: string, params: Record<string, string | number> = {}) {
+    const allParams = { ...this.params, ...params }
+    const queryString = Object.entries(allParams)
+      .map(([key, value]) => `${key}=${value}`)
+      .join('&')
+
+    return `${this.baseURL}/${uri}?${queryString}`
+  }
 
   constructor() {
     const timestamp = Number(new Date())
@@ -11,28 +20,23 @@ class MarvelApi {
     const privateKey = process.env.REACT_APP_API_PRIVATE_KEY as string
     const hashKey = md5(timestamp + privateKey + publicKey)
 
+    this.baseURL = process.env.REACT_APP_API_URL as string
     this.limit = 20
-    this.http = axios.create({
-      baseURL: process.env.REACT_APP_API_URL,
-      params: {
-        limit: this.limit,
-        apikey: publicKey,
-        hash: hashKey,
-        ts: timestamp,
-      },
-    })
+    this.params = {
+      limit: this.limit,
+      apikey: publicKey,
+      hash: hashKey,
+      ts: timestamp,
+    }
   }
 
   public search(search: string, page = 1) {
     const offset = (page * this.limit) - this.limit
 
-    return this.http.get('characters', {
-      params: {
-        ...this.http.defaults.params,
-        nameStartsWith: search,
-        offset,
-      },
-    })
+    return fetch(this.getURI('characters', {
+      nameStartsWith: search,
+      offset,
+    })).then((response) => response.json())
   }
 }
 

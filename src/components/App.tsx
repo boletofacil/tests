@@ -20,7 +20,7 @@ function App() {
 
     try {
       const { data } = await marvel.search(search, page)
-      const { results, ...responseMetadata } = data.data
+      const { results, ...responseMetadata } = data
       setMetadata(responseMetadata)
       setCharacters(results)
     } catch (ex) {
