@@ -37,7 +37,7 @@ function App() {
         <div className="container bg-white">
           <SearchBox submitSearch={submitSearch} />
 
-          <div className={(loading || characters.length) ? 'd-block' : 'd-none'}>
+          <div className={loading || characters.length ? 'd-block' : 'd-none'}>
             <hr />
 
             {loading ? (

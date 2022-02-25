@@ -23,12 +23,7 @@ function CharacterModal({ character, hideDetails }: CharacterModalProps) {
   }, [hideDetails])
 
   return (
-    <div
-      id="character-details"
-      className="modal fade"
-      role="dialog"
-      tabIndex={1}
-    >
+    <div id="character-details" className="modal fade" role="dialog" tabIndex={1}>
       <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header d-flex flex-column align-items-center">
@@ -42,22 +37,26 @@ function CharacterModal({ character, hideDetails }: CharacterModalProps) {
                 alt="Character thumbnail"
               />
             </figure>
-            <h1 className="modal-title text-center">
-              {character.name}
-            </h1>
+            <h1 className="modal-title text-center">{character.name}</h1>
           </div>
 
           <div className="modal-body text-center">
             <p className="h5">
-              {character.description || (
-                <span className="font-italic">No description</span>
-              )}
+              {character.description || <span className="font-italic">No description</span>}
             </p>
             <div className="d-flex justify-content-around pt-3">
-              <h5><span className="badge badge-primary">{character.stories.available} stories</span></h5>
-              <h5><span className="badge badge-danger">{character.comics.available} comics</span></h5>
-              <h5><span className="badge badge-info">{character.series.available} series</span></h5>
-              <h5><span className="badge badge-warning">{character.events.available} events</span></h5>
+              <h5>
+                <span className="badge badge-primary">{character.stories.available} stories</span>
+              </h5>
+              <h5>
+                <span className="badge badge-danger">{character.comics.available} comics</span>
+              </h5>
+              <h5>
+                <span className="badge badge-info">{character.series.available} series</span>
+              </h5>
+              <h5>
+                <span className="badge badge-warning">{character.events.available} events</span>
+              </h5>
             </div>
           </div>
 

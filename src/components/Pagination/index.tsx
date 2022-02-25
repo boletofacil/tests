@@ -30,19 +30,25 @@ function Pagination({ goToPage, displayCounter, current, total, limit }: Paginat
         type="button"
         className="btn btn-outline-marvel page-nav-btn"
         onClick={goToPrevious}
-        style={{ visibility: (current === 1) ? 'hidden' : 'visible' }}
-      >Previous</button>
+        style={{ visibility: current === 1 ? 'hidden' : 'visible' }}
+      >
+        Previous
+      </button>
 
       {!displayCounter || (
-        <span>Page {current} of {last}</span>
+        <span>
+          Page {current} of {last}
+        </span>
       )}
 
       <button
         type="button"
         className="btn btn-outline-marvel page-nav-btn"
         onClick={goToNext}
-        style={{ visibility: (current === last) ? 'hidden' : 'visible' }}
-      >Next</button>
+        style={{ visibility: current === last ? 'hidden' : 'visible' }}
+      >
+        Next
+      </button>
     </div>
   )
 }

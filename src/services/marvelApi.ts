@@ -31,12 +31,14 @@ class MarvelApi {
   }
 
   public search(search: string, page = 1) {
-    const offset = (page * this.limit) - this.limit
+    const offset = page * this.limit - this.limit
 
-    return fetch(this.getURI('characters', {
-      nameStartsWith: search,
-      offset,
-    })).then((response) => response.json())
+    return fetch(
+      this.getURI('characters', {
+        nameStartsWith: search,
+        offset,
+      }),
+    ).then((response) => response.json())
   }
 }
 

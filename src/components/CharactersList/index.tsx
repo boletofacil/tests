@@ -19,22 +19,14 @@ function CharactersList({
   goToPage,
   characters,
   currentPage,
-  metadata: {
-    total = 1,
-    limit = 1,
-  },
+  metadata: { total = 1, limit = 1 },
 }: CharactersListProps) {
   const [displayDetails, setDisplayDetails] = useState(null)
 
   return (
     <div className="pb-4">
       {total > limit && (
-        <Pagination
-          goToPage={goToPage}
-          current={currentPage}
-          total={total}
-          limit={limit}
-        />
+        <Pagination goToPage={goToPage} current={currentPage} total={total} limit={limit} />
       )}
 
       <div className="row">
@@ -58,10 +50,7 @@ function CharactersList({
       )}
 
       {!displayDetails || (
-        <CharacterModal
-          character={displayDetails}
-          hideDetails={setDisplayDetails}
-        />
+        <CharacterModal character={displayDetails} hideDetails={setDisplayDetails} />
       )}
     </div>
   )

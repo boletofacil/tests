@@ -24,7 +24,7 @@ function SearchBox({ submitSearch }: SearchBoxProps) {
             id="search-input"
             type="text"
             className="form-control border-marvel col-10 col-lg-11 rounded-0"
-            placeholder="e.g.: &quot;captain&quot;"
+            placeholder='e.g.: "captain"'
             value={search}
             onChange={(ev) => setSearch(ev.target.value)}
             autoFocus
